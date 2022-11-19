@@ -1,0 +1,23 @@
+.navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+    justify-content: center;
+  }
+  .navbar .links {
+    margin-left: auto;
+  }
+  .navbar a {
+    margin-left: 16px;
+    text-decoration: none;
+    padding: 6px;
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    background: linear-gradient(142deg, rgba(0,44,196,1) 5%, rgba(0,180,169,1) 97%)
+  }
+  .navbar a:hover {
+    color: rgba(0,44,196,1);
+  }

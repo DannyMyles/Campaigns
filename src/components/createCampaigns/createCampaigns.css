@@ -1,0 +1,30 @@
+.campaign-form{
+    border-radius: 10px;
+    background-color: #fff;
+    
+  }
+
+.uploadIcon{
+    width: 100%;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+}
+.os-check{
+    justify-content: space-between;
+    display: flex;
+}
+.form-actions{
+    display: flex;
+    padding:10px;
+    justify-content: space-between;
+}
+
+.action-left{
+    padding: 20px;
+}
+
+.action-right{
+    display: flex;
+    padding: 10px;
+}

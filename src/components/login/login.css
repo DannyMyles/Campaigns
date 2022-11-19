@@ -1,0 +1,139 @@
+.login-container{
+	display: flex;
+	justify-content: center; 
+	background: #ffffff;
+	align-items: center;
+	flex-direction: column;
+}
+.container {
+	padding: 15px;
+	border: 1px solid rgb(255, 255, 255);
+	border-radius: 0.4rem;
+	margin: 4em;
+	
+}
+/* Select immediate children of the container */
+.left-container{
+	background:url("../../images/Logo_vector.svg") center bottom;
+	background-color: rgb(2, 19, 66);
+	background-size: 180%;
+	background-repeat: no-repeat;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	padding: 10px;
+	border-radius: 10px;
+}
+.left-inner{
+	background-image: url('../../images/Transaprent_background.svg');
+	background-size: cover;
+	display: flex;
+	padding: 10px 10px;
+	border-radius: 5px;
+	justify-content: center;
+	
+}
+.left-inner img{
+	width: 100%;
+}
+.left-inner div:first-child{
+	width: 35%;
+	border-right: 2px solid white;
+	padding: 10px;
+	align-self: center;
+}
+.left-inner div:last-child{
+	padding: 10px;
+	color: white;
+	align-self: center;
+	font-weight: bold;
+}
+
+/* form container */
+.right-container{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100%;
+	padding: 10px 10px 0 10px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+}
+.right-container >*{
+	width: 100%;
+	align-self: center;
+	font-size: 12px;
+}
+a{
+	color:#0049a3;
+	text-decoration: none;
+}
+form {
+	align-self: center;
+	margin-top: auto;
+}
+form >*{
+	align-self: center;
+}
+
+.input-forgot, .right-footer{
+	text-align: center;
+	font-size: 10px;
+	letter-spacing:normal;
+}
+.right-footer hr{
+	border: none;
+	border-bottom: rgb(147, 146, 146) 1px dotted;
+}
+
+.footer-bottom {
+	text-align: center;
+	margin-top: auto;
+	font-size:10px;
+}
+@media (min-width:980px) {
+	.container{
+		display: flex;
+		width: 50%;
+		height: 79vh;
+		max-width: 100%;
+	}
+	.container >div {
+		width: 50%;
+	}
+	.left-inner img{
+		width: 100%;
+	}
+	.left-inner div:first-child{
+		width: 25%;
+	}
+	.right-container >*{
+		width: 70%;
+	}
+}
+@media (max-width:320px) {
+	.container{
+		padding: 5px;
+	}
+	.left-inner{
+		flex-direction: column;
+	}
+	.left-inner div:first-child{
+		border: none;
+		border-bottom: 2px solid white;
+	}
+	.left-inner div:first-child{
+		width: 75%;
+	}
+	.left-inner div:last-child{
+		text-align: center;
+		line-height: 18px;
+		padding-top: 0;
+	}
+	form h3{
+		font-size:11px;
+	}
+}
