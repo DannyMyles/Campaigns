@@ -10,10 +10,13 @@
     justify-content: space-between;
 }
 .profile .logo-profile img{
-    width:50%;
+    width:60%;
     margin: 20px 0 ;
 }
-
+.drop-down img{
+    width:50%;
+    margin: 15px 0 ;
+}
 .name-profile{
     display: flex;
     justify-content: space-between;  
@@ -21,6 +24,7 @@
     text-align: center;
     justify-content: center;
     margin: 20px 0 ;
+    gap: 0.78rem;
 }
 .name-profile .name-icon{
     width: 3.063rem;
@@ -38,7 +42,6 @@ a{
 }
 .name-profile .name-title{
     display: flex;
-    /* padding: 10px; */
 }
 .name-profile .name-title .name{
     justify-content: center;
@@ -58,23 +61,30 @@ a{
 .campaign-recent{
     width: 100%;  
 }
-.campaign-address .location{
+.campaign-intro h4{
+    font-size: 20px;
+    font-family: Lato;
+}
+.campaign-address .location
+{
     display: flex;
     padding: 5px;
     
 }
+
 .campaign-recent .inner-container{
     height: 162px;
     padding: 61px 0 8px 5px;
     border-radius: 16px;
     background-color: #fff;
     margin-top: -95px;
+    margin-bottom: 1.5em;
 
 }
-.campaign-recent .inner-container hr{
+.inner-container hr{
     background-color: #ededed;
 }
-.campaign-recent .inner-container h4{
+.inner-container h4{
     margin-bottom: 10px;
 }
 

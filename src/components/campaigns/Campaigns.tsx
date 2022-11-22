@@ -6,6 +6,9 @@ import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
 import location from "../../images/campaing/location.svg";
 import user_configuration from "../../images/campaing/user-configurations.svg";
 import buy_goods from "../../images/campaing/buy_goods.svg";
+import arrow_drop from "../../images/campaing/arrow_drop.svg";
+import left_arrow from "../../images/campaing/left_arrow.svg";
+import right_arrow from "../../images/campaing/right_arrow.svg";
 import {useEffect, useState } from 'react';
 import CreatCampaigns from '../createCampaigns/CreatCampaigns';
 import Modal from '../modal/Modal';
@@ -50,6 +53,7 @@ const Campaigns = () => {
                                                 <p>John Jon M</p>
                                           </div>
                                           <div className="drop-down">
+                                                <img src={arrow_drop} alt="" />
                                           </div>
                                     </div>
                               </div>
@@ -59,7 +63,7 @@ const Campaigns = () => {
                   <div className='campaign-recent'>
 
                         <div className=" inner-container">
-                              <div className="campaign-intro">
+                              <div className="campaign-intro ">
                                     <h4>Hello John! Here's your recent feature release activity.</h4>
                               </div>
                               <div className="campaign-address">
@@ -109,8 +113,7 @@ const Campaigns = () => {
                               <div className="release-title">
                                     <h4>Release History</h4>
                               </div>
-
-                              {campaigns.map(campaign => <div className="campaign flex-contentbtn">
+                               <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={mpesa_xpress} alt="buy_goods" /></div>
                                     <div className='des'>
                                           <h4>Mpesa Xpress</h4>
@@ -122,9 +125,7 @@ const Campaigns = () => {
                                           <div className='device os-icon'><span className="IOS">Web</span></div>
                                     </div>
 
-                              </div>)}
-
-                              <br />
+                              </div>
                               <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={buy_goods} alt="buy_goods" /></div>
                                     <div className='des'>
@@ -138,7 +139,6 @@ const Campaigns = () => {
                                     </div>
 
                               </div>
-                              <br />
                               <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={user_configuration} alt="user_configuration" /></div>
                                     <div className='des'>
@@ -152,7 +152,6 @@ const Campaigns = () => {
                                     </div>
 
                               </div>
-                              <br />
                               <div className="campaign flex-contentbtn">
                                     <div className="logo"><img src={deposit_creation} alt="deposit_creation" /></div>
                                     <div className='des'>
