@@ -7,7 +7,7 @@ import {v4 as uuid} from 'uuid'
 
 const CreateCampaignsProps=()=>{
 const campaignData = [{ 
-      id: uuid(),
+       
       campaignTitle:"Term Deposit Renewal",
 campaignDescription:"New Term Deposit",
  campaignFile:"jpeg"
