@@ -3,12 +3,17 @@
     background-color: #fff;
     
   }
-
+  input[type="file"] {
+    display: none;}
 .uploadIcon{
     width: 100%;
     padding: 30px;
     border-radius: 8px;
     background-color: #f3f3f3;
+}
+.btn1 {
+    margin-right: 30px;
+
 }
 .os-check{
     justify-content: space-between;

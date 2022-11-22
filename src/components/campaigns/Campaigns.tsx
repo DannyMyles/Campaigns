@@ -22,13 +22,13 @@ const Campaigns = () => {
       let campaigns:Campaign[], setCompains:any;
       [campaigns, setCompains] = useState([]);
 
-      useEffect(() => {
-            fetch("http://localhost:4200/campaigns")
-                  .then(response => response.json())
-                  .then((campaigns:Campaign)=>{
-                    setCompains(campaigns);
-                  })
-      }, []);
+      ///useEffect(() => {
+          //  fetch("http://localhost:4200/campaigns")
+               //   .then(response => response.json())
+                //  .then((campaigns:Campaign)=>{
+                   // setCompains(campaigns);
+                 // })
+     // }, []);
 
       return (
 
@@ -94,13 +94,11 @@ const Campaigns = () => {
                                           </span>
                                     </div>
 
-
-
                                     <div className="create-button">
                                           <button onClick={() => { setOpenModal(true) }} > + Create Campaign</button>
                                     </div>
-                                    {openModal && <Modal setOpenModal={setOpenModal}>
-                                          <CreatCampaigns setOpenModal={setOpenModal} />
+                                  {openModal && <Modal setOpenModal={setOpenModal}>
+                                         <CreatCampaigns  />
                                     </Modal>}
                               </div>
 
@@ -127,7 +125,7 @@ const Campaigns = () => {
                               </div>)}
 
                               <br />
-                              {/* <div className="campaign flex-contentbtn">
+                               <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={buy_goods} alt="buy_goods" /></div>
                                     <div className='des'>
                                           <h4>Buy Goods & Services </h4>
@@ -139,8 +137,8 @@ const Campaigns = () => {
                                           <div className='device os-icon'><span className="IOS">Web</span></div>
                                     </div>
 
-                              </div> */}
-                              {/* <br />
+                              </div>
+                               <br /> 
                               <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={user_configuration} alt="user_configuration" /></div>
                                     <div className='des'>
@@ -153,8 +151,8 @@ const Campaigns = () => {
                                           <div className='device os-icon'><span className="IOS">Web</span></div>
                                     </div>
 
-                              </div> */}
-                              {/* <br />
+                              </div> 
+                               <br />
                               <div className="campaign flex-contentbtn">
                                     <div className="logo"><img src={deposit_creation} alt="deposit_creation" /></div>
                                     <div className='des'>
@@ -167,7 +165,7 @@ const Campaigns = () => {
                                           <div className='device os-icon'><span className="IOS">Web</span></div>
                                     </div>
 
-                              </div> */}
+                              </div >
                         </div>
                   </div>
             </div>
