@@ -7,7 +7,7 @@ type CreateCampaignsProps ={
   setOpenModal: Function
 }
 
-const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {  const [os, setOs] =useState("All")
+const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, setOs] =useState("All")
 
 function handlecheckBox (evt:any){
  console.log(evt.target.value)
@@ -46,7 +46,7 @@ return (
                          <button> <img src={removeIcon} alt="Remove" /> </button>
                    </div>
                    <div className="action-right">
-                         <div><button onClick={() => { setOpenModal(false) }} >Cancel</button></div> 
+                         <div><button onClick={() => {setOpenModal(false)}}>Cancel</button></div> 
                          <div><button>Save</button></div>
                    </div>
              </div>
