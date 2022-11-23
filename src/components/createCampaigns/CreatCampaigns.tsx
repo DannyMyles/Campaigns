@@ -73,6 +73,7 @@ return (
 <div className="form-actions">
 <div className="action-right">
 <button className="btn-icons"> <img src={removeIcon}  alt="Remove" /><span btn-icons >Remove</span> </button>
+//display flex
 <button className="btn1">Cancel</button> 
 <button className="btn2" onClick={handleSubmit }>Save</button> 
  </div>
