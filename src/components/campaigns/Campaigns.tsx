@@ -22,13 +22,13 @@ const Campaigns = () => {
       let campaigns:Campaign[], setCompains:any;
       [campaigns, setCompains] = useState([]);
 
-      ///useEffect(() => {
-          //  fetch("http://localhost:4200/campaigns")
-               //   .then(response => response.json())
-                //  .then((campaigns:Campaign)=>{
-                   // setCompains(campaigns);
-                 // })
-     // }, []);
+      useEffect(() => {
+          fetch("http://localhost:4200/campaigns")
+                .then(response => response.json())
+                .then((campaigns:Campaign)=>{
+                  setCompains(campaigns);
+                  })
+ }, []);
 
       return (
 
@@ -97,8 +97,9 @@ const Campaigns = () => {
                                     <div className="create-button">
                                           <button onClick={() => { setOpenModal(true) }} > + Create Campaign</button>
                                     </div>
+                                    
                                   {openModal && <Modal setOpenModal={setOpenModal}>
-                                         <CreatCampaigns  />
+                                         <CreatCampaigns setOpenModal={setOpenModal} />
                                     </Modal>}
                               </div>
 
