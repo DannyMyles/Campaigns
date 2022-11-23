@@ -77,9 +77,9 @@ return (
              </div>
        </form>
 <div className="heading">
-<h2>Add New Feature</h2>
-</div>
-<h3>Select Devices</h3>
+<h3>Add New Feature</h3>
+</div><br/>
+<h4>Select Devices</h4>
 <div className='os-check'>
 <div className='os-check'>
    <label><input type="checkbox" checked={ os === 'All'}  value='All' onChange={handlecheckBox}/>All</label>
@@ -89,14 +89,14 @@ return (
     <label><input type="checkbox" checked={os ==='Corprate'} value='Corprate' onChange={handlecheckBox}  />Corprate</label>
   </div></div>
 <div className="input-box ">
- <label>Add Title</label>
+ <h4>Add Title</h4>
 <input type="text" name="campaignTitle" onChange={handleChange} placeholder='Enter title'/>
-<label>Add Description</label>
+<h4>Add Description</h4>
 <input type="text" className='description' name="campaignDescription" onChange={handleChange} placeholder='Enter description'/>
  </div>
+<div><h4>Upload Files</h4>
 <div className="btn-icons uploadIcon">
 <div className='upload'>
-<h4>Upload Files</h4>
  <label > 
 <input type="file"  onChange={handleChange} name="campaignFile"/>
 <img src={upload}    alt="" placeholder='Drag and Drop or browse to choose a file'/>
@@ -104,13 +104,13 @@ return (
   </label>
   </div>  
 </div>
-<div className="form-actions">
-<div  >
-<button className="btn-icons"> <img src={removeIcon}  alt="Remove" /> <span>Remove</span> </button>
 </div>
+<div className="form-actions">
 <div className="action-right">
- <div className="btn1"><button>Cancel</button></div> 
-<div id="btn2"><button onClick={handleSubmit }>Save</button></div>
+<button className="btn-icons"> <img src={removeIcon}  alt="Remove" /><span btn-icons >Remove</span> </button>
+//display flex
+<button className="btn1">Cancel</button> 
+<button className="btn2" onClick={handleSubmit }>Save</button> 
  </div>
 </div>
  </form>
