@@ -1,7 +1,6 @@
 .campaign-form{
     border-radius: 10px;
     background-color: #fff;
-    
   }
 
 .uploadIcon{
@@ -10,6 +9,11 @@
     border-radius: 8px;
     background-color: #f3f3f3;
 }
+.heading{
+    text-align: left;
+    margin-bottom: 10px;
+}
+
 .os-check{
     justify-content: space-between;
     display: flex;
@@ -24,7 +28,20 @@
     padding: 20px;
 }
 
-.action-right{
+.action-right {
     display: flex;
     padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.action-right div:first-child button{
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    padding: 5px;
+    outline: transparent;
+}
+.form-actions .btn-icons{
+    background-color: #ffffff;
+    display: flex;
 }
