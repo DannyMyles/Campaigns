@@ -2,7 +2,37 @@
     border-radius: 10px;
     background-color: #fff;
   }
+  input[type="file"] {
+    display: none;
+     
+}
+.upload{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+   border: 1px  #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    
 
+}
+    input[type=text]{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        
+        
+    }
+    .description{
+        height: 75px;
+        line-height: 75px;
+        padding: 5px;
+    }
 .uploadIcon{
     width: 100%;
     padding: 30px;
@@ -14,6 +44,19 @@
     margin-bottom: 10px;
 }
 
+.btn1 {
+    margin-right: 50px;
+    background-color: white;
+    text-align: center;
+    cursor: pointer;
+    width:30%auto;
+}
+.btn2 {
+    margin-right: 50px;
+    cursor: pointer;
+width: auto;
+    text-align: center;
+}
 .os-check{
     justify-content: space-between;
     display: flex;
@@ -44,4 +87,30 @@
 .form-actions .btn-icons{
     background-color: #ffffff;
     display: flex;
+}
+
+.action-right{
+    display: flex;
+    padding: 10px;
+
+}
+span {
+    padding: 5px;
+}
+btn-icons{
+    padding: 1px 6px 1px 6px;
+    line-height: 24px;
+   cursor: pointer;
+   text-align: center;
+    cursor: pointer;
+    margin-left: 50px;
+
+}
+button img{
+    width: 22px;
+    height: 22px;
+        vertical-align: middle;
+}​
+h3, h4{
+    text-align:left;
 }
