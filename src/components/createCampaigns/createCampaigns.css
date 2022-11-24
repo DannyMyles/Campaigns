@@ -25,7 +25,7 @@
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-        
+         
         
     }
     .description{
@@ -45,18 +45,28 @@
 }
 
 .btn1 {
-    margin-right: 50px;
-    background-color: white;
+    margin-right: 30px;
+    background-color: transparent;
     text-align: center;
     cursor: pointer;
-    width:30%auto;
+    width:auto;
+    border: none;
+    outline: none;
 }
 .btn2 {
-    margin-right: 50px;
+    margin-right: 30px;
     cursor: pointer;
-width: auto;
+    width: auto;
     text-align: center;
 }
+.btn2:hover{
+    background: #e2e5e4;
+
+} 
+.btn1:hover{
+    background: #e2e5e4;
+
+} 
 .os-check{
     justify-content: space-between;
     display: flex;
@@ -103,7 +113,11 @@ btn-icons{
    cursor: pointer;
    text-align: center;
     cursor: pointer;
-    margin-left: 50px;
+    margin-right: 50px;
+
+}
+.btn-icons:hover{
+    background: #e2e5e4;
 
 }
 button img{
