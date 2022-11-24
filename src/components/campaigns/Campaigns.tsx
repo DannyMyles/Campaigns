@@ -201,20 +201,43 @@ const Campaigns = () => {
           </div>
 
           {/* Pagination */}
-            <div className="pagination-item">
-              <div className="page-link">
-                  <div>
-                    <div>
-                      <img src={left_arrow} alt="left_arrow" /><a href="#" className="page-link-prev">Prev</a>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
-                    </div>
+          <div className="pagination-item">
+            <div className="page-link">
+              <div>
+                <div>
+                  <img src={left_arrow} alt="left_arrow" />
+                  <a href="#" className="page-link-prev">
+                    Prev
+                  </a>
+                </div>
               </div>
+            </div>
+            <div className="page-link page-number">
+              <div>
+                <span>1</span>
               </div>
-
+              <div>
+                <span>2</span>
+              </div>
+              <div>
+                <span>3</span>
+              </div>
+            </div>
+            <div className="page-link">
+              <div>
+                <div>
+                  <img src={right_arrow} alt="right_arrow" />
+                  <a href="#" className="page-link-prev">
+                    Next
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   );
 };
 
-export default Campaigns
+export default Campaigns;
