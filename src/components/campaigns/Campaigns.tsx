@@ -114,7 +114,7 @@ const Campaigns = () => {
               </Modal>
             )}
           </div>
-        </div>
+        </div> 
 
         <div className="release-hitory ">
           <div className="release-title">
@@ -201,6 +201,7 @@ const Campaigns = () => {
             </div>
           </div>
 
+<<<<<<< Updated upstream
           {/* Pagination */}
             <div className="pagination-item">
               <div className="page-link">
@@ -226,6 +227,13 @@ const Campaigns = () => {
         </div>
       </div>
     </div>
+=======
+         </div>
+         </div>
+         </div>
+     
+      
+>>>>>>> Stashed changes
   );
 };
 
