@@ -45,8 +45,8 @@
     border-radius: 8px;
     background-color: #F3F3F3;
 }
-/* .btn1 {
-    
+
+
     background-color: transparent;
     text-align: center;
     cursor: pointer;
@@ -88,9 +88,26 @@
     justify-content: space-between;
 }
 
-/* .action-left{
+
+
+.action-right {
+    display: flex;
     padding: 10px;
-/* } */
+    justify-content: space-around;
+    align-items: center;
+}
+
+.action-right div:first-child button{
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    padding: 5px;
+    outline: transparent;
+}
+.form-actions .btn-icons{
+    background-color: #ffffff;
+    display: flex;
+}
+
 
 .action-right{
     display: flex;
@@ -143,7 +160,7 @@ button img{
     width: 22px;
     height: 22px;
     vertical-align: middle;
-}​
+}
  
 div.heading{
     text-align:left;
