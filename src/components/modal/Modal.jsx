@@ -4,7 +4,7 @@ const Modal = ({ setOpenModal, children }) => {
   return (
     <div className="modalBackground">
       <div className="modal">
-        <div className="cancelIcon btn-icons">
+        <div className="cancelIcon">
           <button
             onClick={() => {
               setOpenModal(false);
