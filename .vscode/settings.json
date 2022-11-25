@@ -1,4 +1,12 @@
 {
+<<<<<<< Updated upstream
     "files.autoSave": "onFocusChange",
     "workbench.sash.size": 2
+=======
+<<<<<<< Updated upstream
+    "files.autoSave": "afterDelay"
+=======
+    "files.autoSave": "off"
+>>>>>>> Stashed changes
+>>>>>>> Stashed changes
 }

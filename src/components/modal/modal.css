@@ -1,22 +1,13 @@
-.modalBackground{
-      width: 100vw;
-      height: 100vh;
-      background-color: rgba(0, 0, 0, 0.24);
-      position: fixed;
-      z-index: 10px;
-      top: 0;
-      left: 0;
-      display: flex;
-      justify-content: center;
-      
-    }
-    .modal{
-      background-color: #fff;
-      align-self: center;
-      padding: 30px;
-      border-radius: 10px;
-    }
-    .cancelIcon{
-      margin-top: -20px;
-      float: right;
-    }
+.modal {
+  background-color: #fff;
+  align-self: center;
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.cancelIcon button{
+  margin-bottom: 5px;
+  float: right;  
+  border: none;
+  background-color: transparent;
+}
