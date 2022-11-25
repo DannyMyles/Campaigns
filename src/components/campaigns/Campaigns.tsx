@@ -200,7 +200,7 @@ const Campaigns = () => {
             </div>
           </div>
 
-<<<<<<< Updated upstream
+
           {/* Pagination */}
           <div className="pagination-item">
             <div className="page-link">
@@ -238,13 +238,8 @@ const Campaigns = () => {
         </div>
       </div>
     </div>
-=======
-         </div>
-         </div>
-         </div>
-     
-      
->>>>>>> Stashed changes
+
+    
   );
 };
 

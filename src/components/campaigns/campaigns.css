@@ -45,9 +45,10 @@
 a {
     padding: 16px;
 }
-.release-title{
-    /* margin-left: 10px; */
-    text-align: left;
+.release-title h4{
+    margin-left: 10px;
+    font-size: 18px;
+    color: #707070;
 }
 .name-profile .name-title {
     display: flex;
@@ -72,12 +73,13 @@ a {
 .campaign-recent {
     width: 100%;
 }
-
-.campaign-intro h4 {
+.campaign-intro{
+    margin-bottom: 10px;
+}
+.campaign-intro h4{
     font-size: 20px;
     font-family: Lato;
     margin-left: 10px;
-   bottom: 30px;
 }
 
 .campaign-address .location {
@@ -107,8 +109,11 @@ a {
 .des {
     padding: 10px;
     text-align: left;
+    
 }
-
+.des h6{
+    color: rgba(0, 0, 0, 0.64);
+}
 .release-container {
     display: flex;
     text-align: center;
