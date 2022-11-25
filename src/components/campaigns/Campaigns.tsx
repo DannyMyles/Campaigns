@@ -6,63 +6,61 @@ import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
 import location from "../../images/campaing/location.svg";
 import user_configuration from "../../images/campaing/user-configurations.svg";
 import buy_goods from "../../images/campaing/buy_goods.svg";
-import {useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CreatCampaigns from '../createCampaigns/CreatCampaigns';
 import Modal from '../modal/Modal';
 
 export interface Campaign {
-  title: string,
-  image?: URL
+      title: string,
+      image?: URL
 }
 
 
 const Campaigns = () => {
 
       const [openModal, setOpenModal] = useState(false);
-      let campaigns:Campaign[], setCompains:any;
+      let campaigns: Campaign[], setCompains: any;
       [campaigns, setCompains] = useState([]);
 
       useEffect(() => {
-          fetch("http://localhost:4200/campaigns")
-                .then(response => response.json())
-                .then((campaigns:Campaign)=>{
-                  setCompains(campaigns);
+            fetch("http://localhost:4200/campaigns")
+                  .then(response => response.json())
+                  .then((campaigns: Campaign) => {
+                        setCompains(campaigns);
                   })
- }, []);
+      }, []);
 
       return (
+ <div className="top-header">
+  <div className='profile'>
+  <div className="inner-container flex-contentbtn">
+ <div className="logo-profile">
+  <img src={Imlogo} alt="logo-image" />
+</div>
+<div className="name-profile">
+      <div>
+   <div className="name-icon">
+         <span>JK</span>
+      </div>
+      </div>
+      <div className="name-title">
+              <div className="name">
+              <p>John Jon M</p>
+            </div>
+      <div className="drop-down">
+      </div>
+      </div>
+ </div>
+</div>
+</div>
 
+ <div className='campaign-recent'>
 
-            <div className="top-header">
-                  <div className='profile'>
-                        <div className="inner-container flex-contentbtn">
-                              <div className="logo-profile">
-                                    <img src={Imlogo} alt="logo-image" />
-                              </div>
-                              <div className="name-profile">
-                                    <div>
-                                          <div className="name-icon">
-                                                <span>JK</span>
-                                          </div>
-                                    </div>
-                                    <div className="name-title">
-                                          <div className="name">
-                                                <p>John Jon M</p>
-                                          </div>
-                                          <div className="drop-down">
-                                          </div>
-                                    </div>
-                              </div>
-                        </div>
-                  </div>
-
-                  <div className='campaign-recent'>
-
-                        <div className=" inner-container">
-                              <div className="campaign-intro">
-                                    <h4>Hello John! Here's your recent feature release activity.</h4>
-                              </div>
-                              <div className="campaign-address">
+  <div className=" inner-container">
+      <div className="campaign-intro">
+       <h4>Hello John! Here's your recent feature release activity.</h4>
+      </div>
+       <div className="campaign-address">
                                     <hr />
                                     <div className="location">
                                           <div> <img src={location} alt="" /></div>
@@ -97,9 +95,9 @@ const Campaigns = () => {
                                     <div className="create-button">
                                           <button onClick={() => { setOpenModal(true) }} > + Create Campaign</button>
                                     </div>
-                                    
-                                  {openModal && <Modal setOpenModal={setOpenModal}>
-                                         <CreatCampaigns setOpenModal={setOpenModal} />
+
+                                    {openModal && <Modal setOpenModal={setOpenModal}>
+                                          <CreatCampaigns setOpenModal={setOpenModal} />
                                     </Modal>}
                               </div>
 
@@ -126,7 +124,7 @@ const Campaigns = () => {
                               </div>)}
 
                               <br />
-                               <div className="campaign flex-contentbtn">
+                              <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={buy_goods} alt="buy_goods" /></div>
                                     <div className='des'>
                                           <h4>Buy Goods & Services </h4>
@@ -139,7 +137,7 @@ const Campaigns = () => {
                                     </div>
 
                               </div>
-                               <br /> 
+                              <br />
                               <div className="campaign flex-contentbtn">
                                     <div className='logo'><img src={user_configuration} alt="user_configuration" /></div>
                                     <div className='des'>
@@ -152,8 +150,8 @@ const Campaigns = () => {
                                           <div className='device os-icon'><span className="IOS">Web</span></div>
                                     </div>
 
-                              </div> 
-                               <br />
+                              </div>
+                              <br />
                               <div className="campaign flex-contentbtn">
                                     <div className="logo"><img src={deposit_creation} alt="deposit_creation" /></div>
                                     <div className='des'>

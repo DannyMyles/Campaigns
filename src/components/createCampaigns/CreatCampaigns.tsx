@@ -7,16 +7,15 @@ type CreateCampaignsProps = {
   setOpenModal: Function
 }
 const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
-  const [os, setOs] = useState("All")
-
+const [os, setOs] = useState("All")
   const campaignData = [{
     campaignTitle: "",
     campaignDescription: "",
     campaignFile: ""
   }]
-  const [details, setDetails] = useState(campaignData
+  const [details, setDetails] = useState(campaignData);
+  const[fileName,setFileName]=useState("No Selected File ")
 
-  );
 
   function handlecheckBox(evt: any) {
     console.log(evt.target.value)
@@ -27,7 +26,7 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target
     setDetails((prev) => {
-      return { ...prev, [name]: value };
+      return { ...prev, [name]:  value };
 
     })
 
@@ -36,8 +35,6 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
     e.preventDefault();
     console.log(details);
   }
-
-
   return (
     <div className='campaign-form'>
       <form className='campian-form'>
@@ -69,18 +66,19 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
           <div className="btn-icons uploadIcon">
             <div className='upload'>
               <label >
-                <input type="file" onChange={handleChange} name="campaignFile" />
-                <img src={upload} alt="" placeholder='Drag and Drop or browse to choose a file' />
+                <input type="file" accept="image/*" onChange={handleChange}  name="campaignFile"/>
+                <img src={upload} alt={fileName} placeholder='Drag and Drop or browse to choose a file' />
                 <p>Drag and Drop or browse to choose a file</p>
               </label>
+              {fileName}
             </div>
           </div>
         </div>
         <div className="form-actions">
           <div><button className="btn-icons"> <img src={removeIcon} alt="Remove" /><div><span btn-icons >Remove</span> </div></button></div>
           <div className="action-right">
-            <div><button>Cancel</button></div>
-            <div> <button onClick={handleSubmit}>Save</button></div>
+            <div><button className='btna'>Cancel</button></div>
+            <div> <button className='btnb' onClick={handleSubmit}>Save</button></div>
           </div>
         </div>
 
