@@ -1,6 +1,8 @@
 .campaign-form {
     border-radius: 10px;
     background-color: #fff;
+
+    
     max-width: 450px;
 }
 input[type="file"] {
@@ -11,7 +13,7 @@ input[type="file"] {
     padding: 12px 20px;
     margin: 8px 0;
     display: inline-block;
-   border: 1px  #ccc;
+    border: 1px #ccc;
     border-radius: 4px;
     box-sizing: border-box;
 }
@@ -114,6 +116,7 @@ placeholder{
 .btn-container{
     display: flex;
 }
+
 span {
     padding: 5px;
 }

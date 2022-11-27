@@ -1,12 +1,18 @@
 {
 <<<<<<< Updated upstream
+<<<<<<< HEAD
     "files.autoSave": "onFocusChange",
     "workbench.sash.size": 2
 =======
 <<<<<<< Updated upstream
+=======
+>>>>>>> d0f03f3bad70dce6063a93168e9e567f0d868552
     "files.autoSave": "afterDelay"
 =======
     "files.autoSave": "off"
 >>>>>>> Stashed changes
+<<<<<<< HEAD
 >>>>>>> Stashed changes
+=======
+>>>>>>> d0f03f3bad70dce6063a93168e9e567f0d868552
 }
