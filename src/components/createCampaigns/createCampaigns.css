@@ -1,9 +1,7 @@
 .campaign-form {
     border-radius: 10px;
     background-color: #fff;
-
-    
-    max-width: 450px;
+    width: 100%;
 }
 input[type="file"] {
     display: none;
@@ -65,7 +63,7 @@ placeholder{
     height: 75px;
     line-height: 75px;
     padding: 5px;
-}
+} 
 .os-check{
     justify-content: space-between;
     display: flex;
