@@ -7,24 +7,21 @@ import { useState } from 'react';
 type CreateCampaignsProps = {
   setOpenModal: Function
 }
-
-const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, setOs] =useState("All")
-
-
-
- const campaignData = [{
+const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
+  const [os, setOs] = useState("All")
+  const campaignData = [{
     campaignTitle: "",
     campaignDescription: "",
     campaignFile: ""
   }]
-  const [details, setDetails] = useState(campaignData
-
-  );
+  const [details, setDetails] = useState(campaignData);
+  const [fileName, setFileName] = useState("No Selected File ")
 
   function handlecheckBox(evt: any) {
     console.log(evt.target.value)
     setOs(evt.target.value)
     console.log(details);
+
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -44,9 +41,10 @@ const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, set
     <div className="campaign-form">
       <form className="campian-form">
         <div className="heading">
-          <h2>Add New Feature</h2>
+          <h2>Create New Campaign</h2>
         </div>
-        <h3>Select Devices</h3>
+        <div className='subheading'>
+          <h3>Select Devices</h3></div>
         <div className="os-check">
           <label>
             <input
@@ -95,26 +93,32 @@ const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, set
           </label>
         </div>
         <div className="input-box ">
-          <label>Add Title</label>
-          <input type="text" placeholder="Enter title" />
+          <div className='addTitle'> <label>Add Campaign Title</label></div>
+          <input type="text" name='campaignTitle'onChange={handleChange} placeholder="Enter title" />
 
-          <label>Add Description</label>
-          <input type="text" placeholder="Enter description" />
+          <div className='addTitle'><label>Add  Campaign Description</label></div>
+          <input type="text" name='campaignDescription' className='description' onChange={handleChange} placeholder="Enter description" />
         </div>
-        <div className="btn-icons uploadIcon">
-          <h4>Upload Files</h4>
+        <div className='uploadFile'> <h4>Upload Icon</h4></div>
+        <div className="uploadIcon">
+          <label> 
+          <input type="file" onChange={handleChange}  />
           <img
             src={upload}
             alt=""
             placeholder="Drag and Drop or browse to choose a file"
           />
+           </label>
           <p>Drag and Drop or browse to choose a file</p>
+           
         </div>
+
         <div className="form-actions">
           <div className="btn-icons">
             <button>
               {" "}
               <img src={removeIcon} alt="Remove" />{" "}
+              <span>Remove</span>
             </button>
           </div>
           <div className="action-right">
@@ -128,7 +132,7 @@ const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, set
               </button>
             </div>
             <div>
-              <button>Save</button>
+              <button onClick={handleSubmit}>  Create </button>
             </div>
           </div>
         </div>
