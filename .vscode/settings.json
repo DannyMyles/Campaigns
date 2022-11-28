@@ -1,7 +1,3 @@
 {
-<<<<<<< Updated upstream
     "files.autoSave": "afterDelay"
-=======
-    "files.autoSave": "off"
->>>>>>> Stashed changes
 }

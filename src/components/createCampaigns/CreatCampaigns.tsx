@@ -43,10 +43,10 @@ const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, set
   return (
     <div className="campaign-form">
       <form className="campian-form">
-        <div className="heading">
-          <h2>Add New Feature</h2>
+        <div>
+          <label>Add New Feature</label>
         </div>
-        <h3>Select Devices</h3>
+        <div><h3>Select Devices</h3></div>
         <div className="os-check">
           <label>
             <input
@@ -94,15 +94,15 @@ const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, set
             Corprate
           </label>
         </div>
-        <div className="input-box ">
-          <label>Add Title</label>
+        <div className="input-box">
+          <label>Add Campaign Title</label>
           <input type="text" placeholder="Enter title" />
 
-          <label>Add Description</label>
+          <label>Add Campaign Description</label>
           <input type="text" placeholder="Enter description" />
         </div>
         <div className="btn-icons uploadIcon">
-          <h4>Upload Files</h4>
+          <label>Upload Files</label>
           <img
             src={upload}
             alt=""
@@ -128,7 +128,7 @@ const CreatCampaigns = ({setOpenModal }:CreateCampaignsProps) => {const [os, set
               </button>
             </div>
             <div>
-              <button>Save</button>
+              <button>Create</button>
             </div>
           </div>
         </div>

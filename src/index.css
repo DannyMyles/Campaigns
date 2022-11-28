@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;1,300&family=Quicksand:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 * {
 	box-sizing: border-box;
 	
@@ -53,18 +53,19 @@ h1,h2,h3,h4,h5,h6,span{
 .input-box input:focus{
 	border:none !important;
 }
-/* .btn-icons img{
-	height: 28px;
-      max-width: 100%;
-} */
-
+button{
+	cursor: pointer;
+	text-align: center;
+    outline: none;
+	color: white;
+}
 /* Global Modal */
 .modalBackground {
 	width: 100vw;
 	height: 100vh;
 	background-color: rgba(0, 0, 0, 0.24);
 	position: fixed;
-	z-index: 10px;
+	z-index: 10;
 	top: 0;
 	left: 0;
 	display: flex;

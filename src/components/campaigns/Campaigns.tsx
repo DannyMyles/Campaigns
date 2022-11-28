@@ -127,6 +127,8 @@ const Campaigns = () => {
               <h4>Mpesa Xpress</h4>
               <h6>Mpesa Xpress feature is a new...</h6>
             </div>
+
+            <button className="more-button">more</button>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
                 <span className="IOS">IOS</span>
