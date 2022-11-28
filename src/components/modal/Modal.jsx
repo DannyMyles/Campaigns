@@ -13,7 +13,6 @@ const Modal = ({ setOpenModal, children }) => {
             <img src={cancelIcon} alt="cancel" />{" "}
           </button>
         </div>
-
         {children}
       </div>
     </div>

@@ -21,11 +21,11 @@
       "description": "Mpesa Xpress feature is a new..."
     }
   ],
-  "comments": [
+  "users": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "name": "some comment",
+      "password": "mypassword"
     }
   ],
   "profile": {

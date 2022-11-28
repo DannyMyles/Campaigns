@@ -3,9 +3,6 @@
     background-color: #fff;
     width: 100%;
 }
-input[type="file"] {
-    display: none;
-}
 .upload {
     width: 100%;
     padding: 12px 20px;
@@ -63,7 +60,30 @@ placeholder{
     height: 75px;
     line-height: 75px;
     padding: 5px;
-} 
+}
+
+.uploadIcon {
+    width: 100%;
+    padding: 100px;
+    height: 70%;
+    border-radius: 8px;
+    background-color: #f3f3f3;
+    
+}
+
+.heading {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.btn2 {
+    margin-right: 30px;
+    cursor: pointer;
+    width: auto;
+    text-align: center;
+    padding-left: 30px;
+    padding-right: 30px;
+}
 .os-check{
     justify-content: space-between;
     display: flex;
@@ -79,7 +99,24 @@ placeholder{
     justify-content: space-between;
 }
 
+.action-right {
+    display: flex;
+    padding: 10px;
+    justify-content: space-around;
+    align-items: center;
+}
 
+.action-right div:first-child button {
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    padding: 5px;
+    outline: transparent;
+}
+
+.form-actions .btn-icons {
+    background-color: #ffffff;
+    display: flex;
+}
 .action-right{
     display: flex;
     gap: 0.5rem;
@@ -114,7 +151,6 @@ placeholder{
 .btn-container{
     display: flex;
 }
-
 span {
     padding: 5px;
 }

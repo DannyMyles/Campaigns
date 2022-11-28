@@ -40,11 +40,10 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   return (
     <div className="campaign-form">
       <form className="campian-form">
-        <div className="heading">
-          <h2>Create New Campaign</h2>
+        <div>
+          <label>Add New Feature</label>
         </div>
-        <div className='subheading'>
-          <h3>Select Devices</h3></div>
+        <div><h3>Select Devices</h3></div>
         <div className="os-check">
           <label>
             <input
