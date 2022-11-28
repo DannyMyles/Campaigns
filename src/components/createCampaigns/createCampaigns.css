@@ -3,17 +3,6 @@
     background-color: #fff;
     width: 100%;
 }
-    
-  
-  input[type="file"] {
-    display: none;
-    
-}
-
-input[type="file"] {
-    display: none;
-
-}
 
 .upload {
     width: 100%;
@@ -35,8 +24,6 @@ input[type="file"] {
         border: 1px solid #ccc;
         border-radius: 4px;
         box-sizing: border-box;
-         
-        
     }
     .description{
         height: 75px;
@@ -75,17 +62,6 @@ input[type=text] {
     margin-bottom: 10px;
 }
 
-
-    /* background-color: transparent;
-    text-align: center;
-    cursor: pointer;
-    width:auto;
-    border: none;
-    outline: none;
-    padding-left: 30px;
-    padding-right: 30px;
-} */
-
 .btn2 {
     margin-right: 30px;
     cursor: pointer;
@@ -94,14 +70,6 @@ input[type=text] {
     padding-left: 30px;
     padding-right: 30px;
 }
-.btn2:hover{
-    background: #e2e5e4;
-
-} 
-.btn1:hover{
-    background: #e2e5e4;
-
-}  */
 .os-check{
     justify-content: space-between;
     display: flex;
@@ -117,9 +85,6 @@ input[type=text] {
     /* padding: 5px; */
     justify-content: space-between;
 }
-
-
-
 .action-right {
     display: flex;
     padding: 10px;
@@ -138,8 +103,6 @@ input[type=text] {
     background-color: #ffffff;
     display: flex;
 }
-
-
 .action-right{
     display: flex;
     gap: 2rem;
@@ -164,69 +127,11 @@ input[type=text] {
   border-radius: 9px;
   background-color: rgba(234, 234, 236, 0.58);
   margin-top: 5px;
+  color: black;
 }
 .btn-container{
-
     display: flex;
 }
-
 span {
     padding: 5px;
-}
-
-
-btn-icons {
-    padding: 1px 6px 1px 6px;
-    line-height: 24px;
-    cursor: pointer;
-    text-align: center;
-    cursor: pointer;
-    text-align: center;
-    cursor: pointer;
-     
-    padding-left: 30px;
-    padding-right: 30px;
-
-}
-.btn-icons:hover{
-    background: #e2e5e4;
-
-}
-
-button img {
-    width: 22px;
-    height: 22px;
-    vertical-align: middle;
-}
- 
-div.heading{
-    text-align:left;
-
-}
-div.heading{
-    text-align:left;
-    padding-bottom:10px; 
-}
-div.subheading{
-    text-align:left;
-}
-.upload-text{
-    text-align:left;
-    padding-top:10px;
-}
-.upload-text-addtitle{
-
-    padding-bottom:10px; 
-}
-div.Web{
-    padding-left: 30px;
-}
-div.Android{
-    padding-left: 30px;
-}
-div.iOS{
-    padding-left: 30px;
-}
-div.Corporate{
-    padding-left: 30px;
 }

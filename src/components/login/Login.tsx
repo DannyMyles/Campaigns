@@ -1,7 +1,8 @@
 import './login.css'
 import Imlogo from "../../images/Imlogo.svg";
-import { useState } from 'react';
-
+import { useContext, useState } from 'react';
+import { UserContext } from '../../context/UserContext';
+import {signIn} from "../../utilites/user"
 interface LoginData{
   username:string,
   password:string
@@ -10,6 +11,7 @@ interface LoginData{
 const Login = () => {
 
     let loginData:LoginData, setLoginData:any;
+    // const { user, setUser } = useContext(UserContext);
     
     [loginData, setLoginData] = useState({
         username: "",
@@ -26,9 +28,9 @@ const Login = () => {
       }
     
       function login(evt:any){
-        evt.preventDefalt();
-        const form = evt.taget;
-        if(form.checkValidity()){
+        evt.preventDefault();
+        const form = evt.target;
+        if(!form.checkValidity()){
           console.log();
           return;
         }
@@ -36,24 +38,9 @@ const Login = () => {
         /**
          * replace <login url> with login end point
          */
-        fetch('<login url>', {method:"POST", body:JSON.stringify(loginData), headers:{
-          "Content-Type":"application/json"
-        }}).then(response=>{
-          // handle any error where response status is not 200
-          if(response.status !== 200){
-            throw new Error(response.statusText);
-          }
-          // when the request is successful
-          return response.json();
-        })
-        .then(json=>{
-          // save jwt token in the localstorage
-          localStorage.setItem('token', json.jwt.token);
-          window.location.href = '/profilepage' 
-        })
-        .catch(e=>{
-          setForError(e.message);
-        })
+       signIn(loginData).then(user=>{
+        // setUser(user);
+       })
       }
     
       return (
