@@ -1,268 +1,279 @@
 .top-header {
-    width: 100%;
-    background-color: #f4f6f7;
-    height: 100%;
+  width: 100%;
+  background-color: #f4f6f7;
+  height: 100%;
 }
 
 .profile {
-    width: 100%;
-    height: 235px;
-    background: linear-gradient(to right, #0033a1 0%, #0099a8 100%);
-    display: flex;
-    justify-content: space-between;
+  width: 100%;
+  height: 235px;
+  background: linear-gradient(to right, #0033a1 0%, #0099a8 100%);
+  display: flex;
+  justify-content: space-between;
 }
 
 .profile .logo-profile img {
-    width: 60%;
-    margin: 20px 0;
+  width: 60%;
+  margin: 20px 0;
 }
 
 .drop-down img {
-    width: 60%;
-    margin: 15px 0;
+  width: 60%;
+  margin: 15px 0;
 }
 
 .name-profile {
-    display: flex;
-    justify-content: space-between;
-    color: #f4f6f7;
-    text-align: center;
-    justify-content: center;
-    margin: 20px 0;
-    gap: 0.78rem;
+  display: flex;
+  justify-content: space-between;
+  color: #f4f6f7;
+  text-align: center;
+  justify-content: center;
+  margin: 20px 0;
+  gap: 0.78rem;
 }
 
 .name-profile .name-icon {
-    width: 3.063rem;
-    height: 3.063rem;
-    justify-content: center;
-    background-color: #3e3e3e;
-    border-radius: 3rem;
-    display: flex;
-    flex-direction: column;
-
-}
-
-a {
-    padding: 16px;
+  width: 3.063rem;
+  height: 3.063rem;
+  justify-content: center;
+  background-color: #3e3e3e;
+  border-radius: 3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .name-profile .name-title {
-    display: flex;
+  display: flex;
 }
 
 .name-profile .name-title .name {
-    justify-content: center;
+  justify-content: center;
 }
 
 .flex-contentbtn {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
-
 .inner-container {
-    width: 100%;
-    margin: 0 auto;
-    padding: 0.3em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0.3em;
 }
 
 /* Second div */
 .campaign-recent {
-    width: 100%;
-}
-.campaign-intro{
-    margin-bottom: 10px;
-}
-.campaign-intro h4{
-    font-size: 20px;
-    font-family: Lato;
-    margin-left: 10px;
+  width: 100%;
 }
 
+.campaign-intro {
+  margin-bottom: 10px;
+}
+
+.campaign-intro h4 {
+  font-size: 20px;
+  font-family: Lato;
+  color: #3e3e3e;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+}
+.line{
+    height: 1px;
+    background-color: #ededed;
+}
 .campaign-address .location {
-    display: flex;
-    padding: 5px;
-
+  display: flex;
+  padding: 5px;
 }
 
 .campaign-recent .inner-container {
-    height: 162px;
-    padding: 61px 0 8px 5px;
-    border-radius: 16px;
-    background-color: #fff;
-    margin-top: -95px;
-    margin-bottom: 1.5em;
+  height: 162px;
+  padding: 61px 0 8px 5px;
+  border-radius: 16px;
+  background-color: #fff;
+  margin-top: -104px;
+  margin-bottom: 1.5em;
 }
 
 .inner-container hr {
-    background-color: #ededed;
+  background-color: #ededed;
 }
 
 .inner-container h4 {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .des {
-    padding: 10px;
-    text-align: left;
-    
+  padding: 10px;
+  text-align: left;
 }
-.des h6{
-    color: rgba(0, 0, 0, 0.64);
+
+.des h6 {
+  color: rgba(0, 0, 0, 0.64);
 }
+
 .release-container {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.release-title h4{
-    margin-left: 10px;
-    font-size: 18px;
-    color: #707070;
+
+.release-title h4 {
+  margin-left: 10px;
+  font-size: 18px;
+  color: #707070;
 }
 
 .release-hitory {
-    /* padding-left: 30px; */
-    width: 100%;
+  /* padding-left: 30px; */
+  width: 100%;
 }
 
 .campaign {
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    border-radius: 16px;
-    background-color: #fff;
-    margin-bottom: 15px;
-}
-.new-release{
-    width: 100%;
-    text-align: left;
+  width: 100%;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  border-radius: 16px;
+  background-color: #fff;
+  margin-bottom: 15px;
 }
 
-.create-campaign{
-    width: 100%;
-    height: 73%;
-    /* padding: 81px 79px 81px 79px; */
-    border-radius: 16px;
-    background-color: #fff;
-    align-items: center;
-    text-align: center;
-    font-size: 20px;
-    display: flex;
+.new-release {
+  width: 100%;
+  text-align: left;
+}
+
+.create-campaign {
+  width: 100%;
+  height: 73%;
+  /* padding: 81px 79px 81px 79px; */
+  border-radius: 16px;
+  background-color: #fff;
+  align-items: center;
+  text-align: center;
+  font-size: 20px;
+  display: flex;
 }
 
 .create-campaign .create-image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  border-radius: 16px;
 }
 
-
 .create-button button {
-    width: 100%;
-    height: 3.5rem;
-    border: none;
-    padding: 18px 43.8px;
-    border-radius: 26px;
-    background: linear-gradient(142deg, rgba(0, 44, 196, 1) 5%, rgba(0, 180, 169, 1) 97%);
-
+  width: 100%;
+  height: 3.5rem;
+  border: none;
+  padding: 18px 43.8px;
+  border-radius: 26px;
+  background: linear-gradient(
+    142deg,
+    rgba(0, 44, 196, 1) 5%,
+    rgba(0, 180, 169, 1) 97%
+  );
 }
 
 .devices {
-    margin-left: auto;
-    font-size: 12px;
-    display: none;
-    position:absolute;
-    z-index: 1;
+  margin-left: auto;
+  font-size: 12px;
+  display: none;
+  position: absolute;
+  z-index: 1;
 }
 
 .os-icon {
-    background: #f0f0f0;
-    padding: 5px 10px;
-    margin: 5px;
-    border-radius: 30px;
-
+  background: #f0f0f0;
+  padding: 5px 10px;
+  margin: 5px;
+  border-radius: 30px;
 }
 
-.pagination-item{
-    display: flex;
-    margin-right: 2rem 0.5rem 2rem 0.5rem;
-    padding: 1.5rem;
-    justify-content: end;
+.pagination-item {
+  display: flex;
+  margin-right: 2rem 0.5rem 2rem 0.5rem;
+  padding: 1.5rem;
+  justify-content: end;
 }
 
-.page-link{
-    margin-right: 0.5rem;
-    font-size: 12px;
-    flex: 0;
+.page-link {
+  margin-right: 0.5rem;
+  font-size: 12px;
+  flex: 0;
 }
 
-.page-number{
-    display: flex;
-    margin: 0.5rem;
-    justify-content: center;
-    padding: 2px 4px;
-    text-decoration: none;
-    gap: 2em;
-    cursor: pointer;
-}
-.page-number > div:first-child{
-    background-color: #f4f6f7;
-    height: 1.3rem;
-    width: 1.3rem;
-    color: #929292;
-    font-weight: bolder;
-    text-align: center;
+.page-number {
+  display: flex;
+  margin: 0.5rem;
+  justify-content: center;
+  padding: 2px 4px;
+  text-decoration: none;
+  gap: 2em;
+  cursor: pointer;
 }
 
+.page-number > div:first-child {
+  background-color: #f4f6f7;
+  height: 1.3rem;
+  width: 1.3rem;
+  color: #929292;
+  font-weight: bolder;
+  text-align: center;
+}
 
 /* 
 .more-button{
     display:block
 } */
 
-@media (min-width:980px) {
-    .release-container {
-        display: flex;
-        flex-direction: row;
+@media (min-width: 980px) {
+  .release-container {
+    display: flex;
+    flex-direction: row;
+  }
 
-    }
-    .release-hitory {
-        padding-left: 30px;
-        width: 70%;
-    }
-    .create-campaign .create-image img {
-        width: 70%;
-        height: 100%;
-        border-radius: 16px;
-    }
-    .create-campaign{
-        padding: 81px 79px 81px 79px;
-        flex-direction: column;
-    }
-    .create-campaign > div{
-        width: 100%;
-    }
-    .new-release{
-        width: 30%;
-    }
-    .inner-container {
-        width: 80%;
-        margin: 0 auto;
-    }
-    .create-button button {
-        margin: 48px 21.1px 30px;
-    }
+  .release-hitory {
+    padding-left: 30px;
+    width: 70%;
+  }
 
-    /* .more-button{
+  .create-campaign .create-image img {
+    width: 70%;
+    height: 100%;
+    border-radius: 16px;
+  }
+
+  .create-campaign {
+    padding: 81px 79px 81px 79px;
+    flex-direction: column;
+  }
+
+  .create-campaign > div {
+    width: 100%;
+  }
+
+  .new-release {
+    width: 30%;
+  }
+
+  .inner-container {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .create-button button {
+    margin: 48px 21.1px 30px;
+  }
+
+  /* .more-button{
         display:none
     } */
 
-    .devices{
-        display: flex;
-        position: static;
-        z-index: 1;
-    }
+  .devices {
+    display: flex;
+    position: static;
+    z-index: 1;
+  }
 }
