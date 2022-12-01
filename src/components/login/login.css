@@ -6,36 +6,36 @@
 	flex-direction: column;
 }
 .container {
-	padding: 15px;
+	padding: 5px;
 	border: 1px solid rgb(255, 255, 255);
 	border-radius: 0.4rem;
-	margin: 4em;
-	border: 1px solid rgb(27, 27, 27);
 	
 }
 /* Select immediate children of the container */
 .left-container{
 	background:url("../../images/Logo_vector.svg") center bottom;
 	background-color: rgb(2, 19, 66);
-	background-size: 180%;
+	background-size: 129%;
 	background-repeat: no-repeat;
-	height: 100%;
+	height: 127%;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	padding: 10px;
-	border-radius: 10px;
+	padding: 20px;
+	border-radius: 9px;
+	margin-bottom: 10px;
 }
 .left-inner{
 	background-image: url('../../images/Transaprent_background.svg');
 	background-size: cover;
 	display: flex;
-	padding: 10px 10px;
+	background-repeat: no-repeat;
 	border-radius: 5px;
 	justify-content: center;
+	height: 30%;
 	
 }
-.left-inner img{
+.left-container.left-inner img{
 	width: 100%;
 }
 .left-inner div:first-child{
@@ -45,10 +45,11 @@
 	align-self: center;
 }
 .left-inner div:last-child{
-	padding: 10px;
+	padding: 15px;
 	color: white;
 	align-self: center;
 	font-weight: bold;
+	font-size: 28px;
 }
 
 /* form container */
@@ -56,11 +57,10 @@
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	height: 100%;
+	height: 127%;
 	padding: 10px 10px 0 10px;
 	display: flex;
 	align-items: center;
-	flex-direction: column;
 	justify-content: center;
 }
 .right-container >*{
@@ -68,9 +68,19 @@
 	align-self: center;
 	font-size: 12px;
 }
+.heading h3{
+	font-size: 30px;
+    font-weight: bold;
+	line-height: normal;
+}
 a{
 	color:#0049a3;
 	text-decoration: none;
+	font-size: 14px
+}
+.right-footer span{
+	color:#0049a3;
+	font-size: 14px;
 }
 form {
 	align-self: center;
@@ -82,7 +92,7 @@ form >*{
 
 .input-forgot, .right-footer{
 	text-align: center;
-	font-size: 10px;
+	font-size: 14px;
 	letter-spacing:normal;
 }
 .right-footer hr{
@@ -93,12 +103,14 @@ form >*{
 .footer-bottom {
 	text-align: center;
 	margin-top: auto;
-	font-size:10px;
+	font-size:14px;
+	color: #989898;
+	margin-bottom: 30px;
 }
 @media (min-width:980px) {
 	.container{
 		display: flex;
-		width: 50%;
+		width: 100%;
 		height: 79vh;
 		max-width: 100%;
 	}
@@ -115,13 +127,15 @@ form >*{
 		width: 70%;
 	}
 }
-@media (max-width:320px) {
+@media (max-width:380px) {
 	.container{
-		padding: 5px;
+		padding: 10px;
 	}
 	.left-inner{
 		flex-direction: column;
+		padding: 20px;
 	}
+	
 	.left-inner div:first-child{
 		border: none;
 		border-bottom: 2px solid white;

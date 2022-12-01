@@ -63,9 +63,11 @@ const Login = () => {
           <div className="right-container">
             <form onSubmit={login}>
               {!formError && <div className="error">{formError}</div>}
+              <div className='heading'>
               <h3>
                 Kindly provide the <br /> details below to login:
               </h3>
+              </div>
               <div className="input-box">
                 <label htmlFor="password">Username</label>
                 <input type="name" placeholder="Enter your username" required name="username" value={loginData.username} onChange={handleChange} />
@@ -86,7 +88,7 @@ const Login = () => {
             </form>
               <div className="right-footer">
                 <hr />
-               <p>Want access to platform? <a href="#">Request access</a></p>
+               <p>Want access to platform?<span>Request access</span></p>
               </div>
               <div className="footer-bottom">
                 <p>©2021 I&M Bank, All rights reserved.</p>
