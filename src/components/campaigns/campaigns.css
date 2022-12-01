@@ -78,9 +78,9 @@
   line-height: normal;
   letter-spacing: normal;
 }
-.line{
-    height: 1px;
-    background-color: #ededed;
+.line {
+  height: 1px;
+  background-color: #ededed;
 }
 .campaign-address .location {
   display: flex;
@@ -183,7 +183,10 @@
   position: absolute;
   z-index: 1;
 }
-
+.devices span {
+  font-family: Lato;
+  font-size: 10px;
+}
 .os-icon {
   background: #f0f0f0;
   padding: 5px 10px;
