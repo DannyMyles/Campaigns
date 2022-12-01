@@ -95,13 +95,8 @@ const Campaigns = () => {
               </span>
             </div>
             <div className="create-button">
-              <button
-                onClick={() => {
-                  setOpenModal(true);
-                }}
-              >
-                {" "}
-                + Create Campaign
+              <button onClick={() => {setOpenModal(true);
+                }}> + Create Campaign
               </button>
             </div>
             {openModal && (
