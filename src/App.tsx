@@ -4,7 +4,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Campaigns from './components/campaigns/Campaigns';
 import Navbar from './components/navbar/Navbar';
 import { UserProvider } from './context/UserContext';
-
 function App() {
   return (
     <UserProvider>

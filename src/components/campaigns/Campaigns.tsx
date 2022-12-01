@@ -20,8 +20,8 @@ export interface Campaign {
 
 const Campaigns = () => {
   const [openModal, setOpenModal] = useState(false);
-  let campaigns: Campaign[], setCompains: any;
-  [campaigns, setCompains] = useState([]);
+  // let campaigns: Campaign[], setCompains: any;
+  const [campaigns, setCompains] = useState<any>([]);
 
   useEffect(() => {
     fetch("http://localhost:4200/campaigns")
@@ -30,7 +30,6 @@ const Campaigns = () => {
         setCompains(campaigns);
       });
   }, []);
-
   return (
     <div className="top-header">
       <div className="profile">
@@ -92,9 +91,7 @@ const Campaigns = () => {
             <div className="create-text">
               <span>
                 To create a feature release <br /> campaign,
-                <span>
-                  <a href="#">click below</a>
-                </span>
+                <span>click below</span>
               </span>
             </div>
             <div className="create-button">
