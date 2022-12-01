@@ -13,7 +13,7 @@ body {
 	align-items: center;
 	flex-direction: column;
 	font-family: 'Lato', sans-serif;
-	line-height: 1.5rem;
+	line-height: 1.5rem;	
 }
 h1,h2,h3,h4,h5,h6,span{
 	padding: 0;
@@ -22,8 +22,9 @@ h1,h2,h3,h4,h5,h6,span{
 }
 
 .input-box{
-	margin: 10px 0;
+	padding: 10px;
 	text-align: left;
+	font-size: 14px;
 }
 
 .input-box input,
@@ -38,8 +39,8 @@ h1,h2,h3,h4,h5,h6,span{
 	background: rgb(231, 230, 230);
 	border: none;
 	border-radius: 50px;
-	padding: 10px 15px;
-	font-size: 12px;
+	padding: 17px 15px;
+	font-size: 14px;
 	outline: none;	
 
 }

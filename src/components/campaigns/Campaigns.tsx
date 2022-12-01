@@ -20,8 +20,8 @@ export interface Campaign {
 
 const Campaigns = () => {
   const [openModal, setOpenModal] = useState(false);
-  let campaigns: Campaign[], setCompains: any;
-  [campaigns, setCompains] = useState([]);
+  // let campaigns: Campaign[], setCompains: any;
+  const [campaigns, setCompains] = useState<any>([]);
 
   useEffect(() => {
     fetch("http://localhost:4200/campaigns")
@@ -30,7 +30,6 @@ const Campaigns = () => {
         setCompains(campaigns);
       });
   }, []);
-
   return (
     <div className="top-header">
       <div className="profile">
@@ -62,7 +61,7 @@ const Campaigns = () => {
             <h4>Hello John! Here's your recent feature release activity.</h4>
           </div>
           <div className="campaign-address">
-            <hr />
+            <div className="line"></div>
             <div className="location">
               <div>
                 {" "}
@@ -92,9 +91,7 @@ const Campaigns = () => {
             <div className="create-text">
               <span>
                 To create a feature release <br /> campaign,
-                <span>
-                  <a href="#">click below</a>
-                </span>
+                <span>click below</span>
               </span>
             </div>
             <div className="create-button">
@@ -122,8 +119,6 @@ const Campaigns = () => {
               <h4>Mpesa Xpress</h4>
               <h6>Mpesa Xpress feature is a new...</h6>
             </div>
-
-            <button className="more-button">more</button>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
                 <span className="IOS">IOS</span>
