@@ -126,13 +126,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
@@ -146,13 +143,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
@@ -166,13 +160,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
@@ -186,13 +177,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
