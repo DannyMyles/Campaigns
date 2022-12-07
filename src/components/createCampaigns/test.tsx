@@ -1,9 +1,9 @@
 import './createCampaigns.css'
 import upload from '../../images/campaing/upload.svg'
 import removeIcon from '../../images/campaing/remove.svg'
-import { useForm } from 'react-hook-form'
+import  { useForm  } from 'react-hook-form'
+import { useState  } from 'react';
 import axios from 'axios'; 
-import { title } from 'process'
 // import Campaigns from "../createCampaigns/createFormvalidation";
 type CreateCampaignsProps = {
   setOpenModal: Function}
@@ -13,22 +13,29 @@ type FormValues = {
   image:any
 }
   const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
-  const {register, handleSubmit, formState:{errors}} = useForm<FormValues>(); 
-  const onSubmit =( Data:any)=>{
-       axios({
-         method: "post",
-         url: "https://jsonplaceholder.typicode.com/posts ",
-         data: {register}
-       }).then(({ data }) => {
-         console.log("Succesfully uploaded: ", JSON.stringify(data));
-       });
-      
-     
-     console.log(Data)
+  const {register, handleSubmit, reset, formState:{errors,isSubmitted}} = useForm<FormValues>(); 
+  const [os, setOs] = useState("All")
+  function handlecheckBox(evt: any) {
+    console.log(evt.target.value)
+    setOs(evt.target.value)
+  }
+
+  const onSubmit =(e: any)=>{
+ e.preventDefault();
+    axios({
+      method: "post",
+      url: "https://jsonplaceholder.typicode.com/posts ",
+      data: {register}
+    }).then(({ data }) => {
+      console.log("Succesfully uploaded: ", JSON.stringify(data));
+    });
    
-      
+  
+  console.log(register)
+
    
-     }
+
+  }
   return (
  
     <div className="campaign-form">
@@ -43,57 +50,57 @@ type FormValues = {
           <label>
             <input
               type="checkbox"
-               
+              checked={os === "All"}
               value="All"
-               
+              onChange={handlecheckBox}
             />
             All
           </label>
           <label>
             <input
               type="checkbox"
-             
+              checked={os === "web"}
               value="web"
-               
+              onChange={handlecheckBox}
             />
             Web
           </label>
           <label>
             <input
               type="checkbox"
-               
+              checked={os === "Android"}
               value="Android"
-               
+              onChange={handlecheckBox}
             />
             Android
           </label>
           <label>
             <input
               type="checkbox"
-              
+              checked={os === "iOS"}
               value="iOS"
-               
+              onChange={handlecheckBox}
             />
             iOS
           </label>
           <label>
             <input
               type="checkbox"
-               
+              checked={os === "Corprate"}
               value="Corprate"
-               
+              onChange={handlecheckBox}
             />
             Corprate
           </label>
         </div>
         <div className="input-box">
           <div className='addTitle'> <label>Add Campaign Title</label></div>
-          <input type="text"  {...register('title',{required:true})}
+          <input type="text"   {...register('title',{required:true})}
            name='title'  placeholder="Enter title"  />
            {errors.title && <p className='alert'>Enter title ! </p>}
           
           <div className='addTitle'><label>Add  Campaign Description</label></div>
-          <input  type="text"  {...register('description',{required:true}) } name='description'     className='description'   placeholder="Enter description" />
+          <input  type="text"    {...register('description',{required:true}) } name='description'     className='description'   placeholder="Enter description" />
           {errors.description && <p className='alert'>Enter Description </p>}
         
         </div>
@@ -102,16 +109,15 @@ type FormValues = {
           <label> 
     
           <input type="file"   {...register('image',{required:true})} name='image'  className="file" autoComplete='off'     />
-          {errors.image && <p>upload image  </p>}
           <img
             src={upload} alt=""
             placeholder="Drag and Drop or browse to choose a file"
              />
            </label>
           <p>Drag and Drop or browse to choose a file</p>
-         
+          
         </div>
-
+        {errors.image && <p>upload image  </p>}
         <div className="form-actions">
           <div className="btn-icons">
             <button>
@@ -122,9 +128,7 @@ type FormValues = {
           </div>
           <div className="action-right">
             <div>
-              <button
-            
-              >
+              <button  >
                 Cancel
               </button>
             </div>

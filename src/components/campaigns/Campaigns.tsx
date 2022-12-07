@@ -95,18 +95,12 @@ const Campaigns = () => {
               </span>
             </div>
             <div className="create-button">
-              <button
-                onClick={() => {
-                  setOpenModal(true);
-                }}
-              >
-                {" "}
-                + Create Campaign
-              </button>
+              <button onClick={() => {setOpenModal(true);
+                }}> + Create Campaign </button>
             </div>
             {openModal && (
               <Modal setOpenModal={setOpenModal}>
-                <CreatCampaigns setOpenModal={setOpenModal} />
+                { <CreatCampaigns setOpenModal={setOpenModal} /> }
               </Modal>
             )}
           </div>
@@ -126,13 +120,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
@@ -146,13 +137,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
@@ -166,13 +154,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
@@ -186,13 +171,10 @@ const Campaigns = () => {
             </div>
             <div className="devices flex-contentbtn">
               <div className="device os-icon">
-                <span className="IOS">IOS</span>
+                <span className="IOS">Retail</span>
               </div>
               <div className="device os-icon">
-                <span className="IOS">Android</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Web</span>
+                <span className="IOS">Coprate</span>
               </div>
             </div>
           </div>
