@@ -120,10 +120,12 @@ const Campaigns = () => {
               >
                 + Create Campaign
               </button>
+              <button onClick={() => {setOpenModal(true);
+                }}> + Create Campaign </button>
             </div>
             {openModal && (
               <Modal setOpenModal={setOpenModal}>
-                <CreatCampaigns setOpenModal={setOpenModal} />
+                { <CreatCampaigns setOpenModal={setOpenModal} /> }
               </Modal>
             )}
           </div>
