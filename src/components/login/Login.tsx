@@ -1,8 +1,8 @@
 import './login.css'
 import Imlogo from "../../images/Imlogo.svg";
 import { useContext, useState } from 'react';
-import { UserContext } from '../../context/UserContext';
-import {signIn} from "../../utilites/user"
+
+// import {signIn} from "../../utilites/user"
 interface LoginData{
   username:string,
   password:string
@@ -38,9 +38,9 @@ const Login = () => {
         /**
          * replace <login url> with login end point
          */
-       signIn(loginData).then(user=>{
-        // setUser(user);
-       })
+      //  signIn(loginData).then(user=>{
+      //   // setUser(user);
+      //  })
       }
     
       return (

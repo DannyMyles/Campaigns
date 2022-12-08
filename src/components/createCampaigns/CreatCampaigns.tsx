@@ -115,7 +115,6 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
         <div className="form-actions">
           <div className="btn-icons">
             <button>
-              {" "}
               <img src={removeIcon} alt="Remove" />{" "}
               <span>Remove</span>
             </button>
@@ -131,7 +130,7 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
               </button>
             </div>
             <div>
-              <button onClick={handleSubmit}>  Create </button>
+              <button onClick={handleSubmit}> Create </button>
             </div>
           </div>
         </div>

@@ -28,7 +28,7 @@
   color: #f4f6f7;
   text-align: center;
   justify-content: center;
-  margin: 20px 0;
+  margin-top: 25px;
   gap: 0.78rem;
 }
 
@@ -36,6 +36,7 @@
   width: 3.063rem;
   height: 3.063rem;
   justify-content: center;
+  text-align: center;
   background-color: #3e3e3e;
   border-radius: 3rem;
   display: flex;
@@ -48,6 +49,13 @@
 
 .name-profile .name-title .name {
   justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+.flex-contentbtn {
+  display: flex;
+  justify-content: space-between;
 }
 
 .flex-contentbtn {
@@ -73,10 +81,11 @@
 .campaign-intro h4 {
   font-size: 20px;
   font-family: Lato;
-  color: #3a3a3a;
+  color: #000;
   font-style: normal;
   line-height: normal;
   letter-spacing: normal;
+  padding-left: 15px;
 }
 .line {
   height: 1px;
@@ -137,7 +146,7 @@
   align-items: flex-start;
   border-radius: 16px;
   background-color: #fff;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .new-release {
@@ -147,7 +156,7 @@
 
 .create-campaign {
   width: 100%;
-  height: 73%;
+  height: 74%;
   /* padding: 81px 79px 81px 79px; */
   border-radius: 16px;
   background-color: #fff;
@@ -194,43 +203,6 @@
   border-radius: 30px;
 }
 
-.pagination-item {
-  display: flex;
-  margin-right: 2rem 0.5rem 2rem 0.5rem;
-  padding: 1.5rem;
-  justify-content: end;
-}
-
-.page-link {
-  margin-right: 0.5rem;
-  font-size: 12px;
-  flex: 0;
-}
-
-.page-number {
-  display: flex;
-  margin: 0.5rem;
-  justify-content: center;
-  padding: 2px 4px;
-  text-decoration: none;
-  gap: 2em;
-  cursor: pointer;
-}
-
-.page-number > div:first-child {
-  background-color: #f4f6f7;
-  height: 1.3rem;
-  width: 1.3rem;
-  color: #929292;
-  font-weight: bolder;
-  text-align: center;
-}
-
-/* 
-.more-button{
-    display:block
-} */
-
 @media (min-width: 980px) {
   .release-container {
     display: flex;
@@ -249,7 +221,7 @@
   }
 
   .create-campaign {
-    padding: 81px 79px 81px 79px;
+    padding: 71px 89px;
     flex-direction: column;
   }
 
@@ -262,18 +234,13 @@
   }
 
   .inner-container {
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
   }
 
   .create-button button {
     margin: 48px 21.1px 30px;
   }
-
-  /* .more-button{
-        display:none
-    } */
-
   .devices {
     display: flex;
     position: static;
