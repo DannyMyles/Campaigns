@@ -2,7 +2,7 @@ import './createCampaigns.css'
 import upload from '../../images/campaing/upload.svg'
 import removeIcon from '../../images/campaing/remove.svg'
 import  { useForm  } from 'react-hook-form'
-import { useState  } from 'react';
+import { useEffect, useState  } from 'react';
 import axios from 'axios'; 
 // import Campaigns from "../createCampaigns/createFormvalidation";
 type CreateCampaignsProps = {
@@ -20,8 +20,8 @@ type FormValues = {
     setOs(evt.target.value)
   }
 
-  const onSubmit =(e: any)=>{
- e.preventDefault();
+  const onSubmit =(Data: any)=>{
+ 
     axios({
       method: "post",
       url: "https://jsonplaceholder.typicode.com/posts ",
@@ -31,7 +31,7 @@ type FormValues = {
     });
    
   
-  console.log(register)
+  console.log(Data)
 
    
 
@@ -133,7 +133,7 @@ type FormValues = {
               </button>
             </div>
             <div>
-              <button type='submit'   >  Create </button>
+              <button type='submit' >  Create </button>
             </div>
           </div>
         </div>
