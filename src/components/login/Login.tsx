@@ -77,7 +77,7 @@ const Login = () => {
                 <input type="password" placeholder="Enter your password" required name="password" value={loginData.password} onChange={handleChange} />
               </div>
               <div className="input-box">
-                <button type="submit">Login</button>
+                <button type="submit" disabled={false}>Login</button>
               </div>
     
               <div className="input-forgot">
