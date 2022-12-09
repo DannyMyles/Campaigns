@@ -18,7 +18,7 @@
 }
 
 .drop-down img {
-  width: 60%;
+  width: 50%;
   margin: 15px 0;
 }
 
@@ -29,10 +29,10 @@
   text-align: center;
   justify-content: center;
   margin-top: 25px;
-  gap: 0.78rem;
+  /* gap: 0.48rem; */
 }
 
-.name-profile .name-icon {
+.name-icon {
   width: 3.063rem;
   height: 3.063rem;
   justify-content: center;
@@ -43,14 +43,15 @@
   flex-direction: column;
 }
 
-.name-profile .name-title {
+.name-profile{
   display: flex;
-}
-
-.name-profile .name-title .name {
   justify-content: center;
-  text-align: center;
   padding: 15px;
+  gap: 0.2rem;
+  margin: 0;
+}
+.name-profile .name-title{
+  margin-top: 1rem;
 }
 
 .flex-contentbtn {

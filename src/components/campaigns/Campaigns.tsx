@@ -56,19 +56,15 @@ const Campaigns = () => {
             <img src={Imlogo} alt="logo-image" />
           </div>
           <div className="name-profile">
-            <div>
-              <div className="name-icon">
+            <div className="name-icon ">
                 <span>JK</span>
-              </div>
             </div>
-            <div className="name-title">
-              <div className="name">
-                <h5>John Jon M</h5>
+              <div className="name-title">
+                <span>John Jon M</span>
               </div>
               <div className="drop-down">
                 <img src={arrow_drop} alt="" />
               </div>
-            </div>
           </div>
         </div>
       </div>
