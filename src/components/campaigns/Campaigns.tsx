@@ -7,11 +7,12 @@ import location from "../../images/campaing/location.svg";
 import user_configuration from "../../images/campaing/user-configurations.svg";
 import buy_goods from "../../images/campaing/buy_goods.svg";
 import arrow_drop from "../../images/campaing/arrow_drop.svg";
-import left_arrow from "../../images/campaing/left_arrow.svg";
-import right_arrow from "../../images/campaing/right_arrow.svg";
 import { useEffect, useState } from "react";
 import CreatCampaigns from "../createCampaigns/CreatCampaigns";
 import Modal from "../modal/Modal";
+import Pagination from "../pagination/Pagination";
+import axios from "axios";
+import Recent from "../RecentCampaigns/Recent";
 
 export interface Campaign {
   title: string;
@@ -20,16 +21,33 @@ export interface Campaign {
 
 const Campaigns = () => {
   const [openModal, setOpenModal] = useState(false);
-  // let campaigns: Campaign[], setCompains: any;
-  const [campaigns, setCompains] = useState<any>([]);
+  const [loading, setLoading] = useState(false);
+  const [campaings, setCampaings] = useState<any>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [campaingPerPage] = useState(5);
+
+  const fetchPosts = async () => {
+    setLoading(true);
+    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    setCampaings(res.data);
+    setLoading(false);
+  };
 
   useEffect(() => {
-    fetch("http://localhost:4200/campaigns")
-      .then((response) => response.json())
-      .then((campaigns: Campaign) => {
-        setCompains(campaigns);
-      });
+    fetchPosts();
   }, []);
+
+  //Get current post
+  const indexOfLastCampaing = currentPage * campaingPerPage;
+  const indexOfFirstCampaing = indexOfLastCampaing - campaingPerPage;
+  const currentCampaing = campaings.slice(
+    indexOfFirstCampaing,
+    indexOfLastCampaing
+  );
+
+  // Change page
+  const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
+
   return (
     <div className="top-header">
       <div className="profile">
@@ -45,7 +63,7 @@ const Campaigns = () => {
             </div>
             <div className="name-title">
               <div className="name">
-                <p>John Jon M</p>
+                <h5>John Jon M</h5>
               </div>
               <div className="drop-down">
                 <img src={arrow_drop} alt="" />
@@ -95,6 +113,13 @@ const Campaigns = () => {
               </span>
             </div>
             <div className="create-button">
+              <button
+                onClick={() => {
+                  setOpenModal(true);
+                }}
+              >
+                + Create Campaign
+              </button>
               <button onClick={() => {setOpenModal(true);
                 }}> + Create Campaign </button>
             </div>
@@ -104,13 +129,18 @@ const Campaigns = () => {
               </Modal>
             )}
           </div>
-        </div> 
+        </div>
 
         <div className="release-hitory ">
           <div className="release-title">
             <h4>Release History</h4>
           </div>
-          <div className="campaign flex-contentbtn">
+
+          <div>
+            <Recent campaings={currentCampaing} loading={loading} />
+          </div>
+          <div className="out">
+            {/* { campaings && campaings.map((campaign:any) => <div className="campaign flex-contentbtn">
             <div className="logo">
               <img src={mpesa_xpress} alt="buy_goods" />
             </div>
@@ -126,8 +156,8 @@ const Campaigns = () => {
                 <span className="IOS">Coprate</span>
               </div>
             </div>
-          </div>
-          <div className="campaign flex-contentbtn">
+          </div>)} */}
+            {/* <div className="campaign flex-contentbtn">
             <div className="logo">
               <img src={buy_goods} alt="buy_goods" />
             </div>
@@ -143,8 +173,8 @@ const Campaigns = () => {
                 <span className="IOS">Coprate</span>
               </div>
             </div>
-          </div>
-          <div className="campaign flex-contentbtn">
+          </div> */}
+            {/* <div className="campaign flex-contentbtn">
             <div className="logo">
               <img src={user_configuration} alt="user_configuration" />
             </div>
@@ -160,8 +190,8 @@ const Campaigns = () => {
                 <span className="IOS">Coprate</span>
               </div>
             </div>
-          </div>
-          <div className="campaign flex-contentbtn">
+          </div> */}
+            {/* <div className="campaign flex-contentbtn">
             <div className="logo">
               <img src={deposit_creation} alt="deposit_creation" />
             </div>
@@ -177,11 +207,10 @@ const Campaigns = () => {
                 <span className="IOS">Coprate</span>
               </div>
             </div>
-          </div>
+          </div> */}
 
-
-          {/* Pagination */}
-          <div className="pagination-item">
+            {/* Pagination */}
+            {/* <div className="pagination-item">
             <div className="page-link">
               <div>
                 <div>
@@ -213,12 +242,19 @@ const Campaigns = () => {
                 </div>
               </div>
             </div>
+          </div> */}
+          </div>
+
+          <div>
+          <Pagination
+            CampaingPerPage={campaingPerPage}
+            totalCampaings={campaings.length}
+            paginate={paginate}
+          />
           </div>
         </div>
       </div>
     </div>
-
-    
   );
 };
 
