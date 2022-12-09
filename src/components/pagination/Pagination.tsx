@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
-import './pagination.css'
+import "./pagination.css";
 import { MdArrowBackIos, MdArrowForwardIos } from "react-icons/md";
 
 const Pagination = ({ CampaingPerPage, totalCampaings, paginate }: any) => {
@@ -11,8 +11,12 @@ const Pagination = ({ CampaingPerPage, totalCampaings, paginate }: any) => {
   return (
     <div className="paginate">
       <ul>
-        <span><MdArrowBackIos /></span>
-        <span>Prev</span>
+        <div className="arrowback">
+          <span>
+            <MdArrowBackIos />
+          </span>
+          <span>Prev</span>
+        </div>
         {pageNumbers.map((page, number) => (
           <li key={number} className="page-item">
             <a onClick={() => paginate(page)} className="page-link">
@@ -20,8 +24,12 @@ const Pagination = ({ CampaingPerPage, totalCampaings, paginate }: any) => {
             </a>
           </li>
         ))}
-        <span>Next</span>
-         <span><MdArrowForwardIos /></span>
+        <div>
+          <span>Next</span>
+          <span>
+            <MdArrowForwardIos />
+          </span>
+        </div>
       </ul>
     </div>
   );

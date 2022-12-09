@@ -56,19 +56,15 @@ const Campaigns = () => {
             <img src={Imlogo} alt="logo-image" />
           </div>
           <div className="name-profile">
-            <div>
-              <div className="name-icon">
+            <div className="name-icon ">
                 <span>JK</span>
-              </div>
             </div>
-            <div className="name-title">
-              <div className="name">
-                <h5>John Jon M</h5>
+              <div className="name-title">
+                <span>John Jon M</span>
               </div>
               <div className="drop-down">
                 <img src={arrow_drop} alt="" />
               </div>
-            </div>
           </div>
         </div>
       </div>
@@ -109,7 +105,7 @@ const Campaigns = () => {
             <div className="create-text">
               <span>
                 To create a feature release <br /> campaign,
-                <span>click below</span>
+                <span className="click">click below</span>
               </span>
             </div>
             <div className="create-button">
@@ -120,12 +116,10 @@ const Campaigns = () => {
               >
                 + Create Campaign
               </button>
-              <button onClick={() => {setOpenModal(true);
-                }}> + Create Campaign </button>
             </div>
             {openModal && (
               <Modal setOpenModal={setOpenModal}>
-                { <CreatCampaigns setOpenModal={setOpenModal} /> }
+                <CreatCampaigns setOpenModal={setOpenModal} />
               </Modal>
             )}
           </div>
@@ -139,112 +133,6 @@ const Campaigns = () => {
           <div>
             <Recent campaings={currentCampaing} loading={loading} />
           </div>
-          <div className="out">
-            {/* { campaings && campaings.map((campaign:any) => <div className="campaign flex-contentbtn">
-            <div className="logo">
-              <img src={mpesa_xpress} alt="buy_goods" />
-            </div>
-            <div className="des">
-              <h4>Mpesa Xpress</h4>
-              <h6>Mpesa Xpress feature is a new...</h6>
-            </div>
-            <div className="devices flex-contentbtn">
-              <div className="device os-icon">
-                <span className="IOS">Retail</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Coprate</span>
-              </div>
-            </div>
-          </div>)} */}
-            {/* <div className="campaign flex-contentbtn">
-            <div className="logo">
-              <img src={buy_goods} alt="buy_goods" />
-            </div>
-            <div className="des">
-              <h4>Buy Goods & Services </h4>
-              <h6>Mpesa Xpress feature is a new... </h6>
-            </div>
-            <div className="devices flex-contentbtn">
-              <div className="device os-icon">
-                <span className="IOS">Retail</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Coprate</span>
-              </div>
-            </div>
-          </div> */}
-            {/* <div className="campaign flex-contentbtn">
-            <div className="logo">
-              <img src={user_configuration} alt="user_configuration" />
-            </div>
-            <div className="des">
-              <h4>User Confirgations</h4>
-              <h6>Mpesa Xpress feature is a new... </h6>
-            </div>
-            <div className="devices flex-contentbtn">
-              <div className="device os-icon">
-                <span className="IOS">Retail</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Coprate</span>
-              </div>
-            </div>
-          </div> */}
-            {/* <div className="campaign flex-contentbtn">
-            <div className="logo">
-              <img src={deposit_creation} alt="deposit_creation" />
-            </div>
-            <div className="des">
-              <h4>Deposit Creation </h4>
-              <h6>Deposit creation feature is a new...</h6>
-            </div>
-            <div className="devices flex-contentbtn">
-              <div className="device os-icon">
-                <span className="IOS">Retail</span>
-              </div>
-              <div className="device os-icon">
-                <span className="IOS">Coprate</span>
-              </div>
-            </div>
-          </div> */}
-
-            {/* Pagination */}
-            {/* <div className="pagination-item">
-            <div className="page-link">
-              <div>
-                <div>
-                  <img src={left_arrow} alt="left_arrow" />
-                  <a href="#" className="page-link-prev">
-                    Prev
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="page-link page-number">
-              <div>
-                <span>1</span>
-              </div>
-              <div>
-                <span>2</span>
-              </div>
-              <div>
-                <span>3</span>
-              </div>
-            </div>
-            <div className="page-link">
-              <div>
-                <div>
-                  <img src={right_arrow} alt="right_arrow" />
-                  <a href="#" className="page-link-prev">
-                    Next
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div> */}
-          </div>
-
           <div>
           <Pagination
             CampaingPerPage={campaingPerPage}
