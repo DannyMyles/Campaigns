@@ -109,7 +109,7 @@ const Campaigns = () => {
             <div className="create-text">
               <span>
                 To create a feature release <br /> campaign,
-                <span>click below</span>
+                <span className="click">click below</span>
               </span>
             </div>
             <div className="create-button">
