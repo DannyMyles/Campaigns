@@ -2,8 +2,7 @@ import './createCampaigns.css'
 import upload from '../../images/campaing/upload.svg'
 import removeIcon from '../../images/campaing/remove.svg'
 import { useForm } from 'react-hook-form'
-import axios from 'axios'; 
-import {useState} from 'react'
+import axios from 'axios'
 import { title } from 'process'
 // import Campaigns from "../createCampaigns/createFormvalidation";
 type CreateCampaignsProps = {
@@ -13,7 +12,7 @@ type FormValues = {
   description: string
   All:true
  Destination:false
- file:any
+ file:''
 }
   const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
     
@@ -86,26 +85,26 @@ type FormValues = {
           <div className='addTitle'> <label>Add Campaign Title</label></div>
           <input type="text"  {...register('title',{required:true})}
            name='title'  placeholder="Enter title"  />
-           {errors.title && <p className='alert'>Enter title ! </p>}
+           {errors.title && <p className='error'>Enter title ! </p>}
           
           <div className='addTitle'><label>Add  Campaign Description</label></div>
           <input  type="text"  {...register('description',{required:true}) } name='description'     className='description'   placeholder="Enter description" />
-          {errors.description && <p className='alert'>Enter Description </p>}
+          {errors.description && <p className='error'>Enter Description </p>}
         </div>
         <div className='uploadFile'> <h4>Upload Icon</h4></div>
         <div className="uploadIcon">
-          <label> 
-  
-          <input type="file"   {...register("file")}    name='image'  className="file" autoComplete='off'/>
+         
+  <label> 
+          <input type="file"  id="file" {...register("file",{required:true})}    name='image'  className="file" autoComplete='off'/>
           
              <img  
             src={upload} alt="filename" placeholder="Drag and Drop or browse to choose a file"
              />
-         
+              </label>
           <p>Drag and Drop or browse to choose a file</p>
-         
-           
-          </label>
+          
+ 
+          
         </div>
 
         <div className="form-actions">

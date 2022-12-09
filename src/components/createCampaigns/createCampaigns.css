@@ -195,3 +195,7 @@ div.Corporate{
 .alert{
 color: red;
 }
+input[type='file']{
+    display: none;
+    
+}
