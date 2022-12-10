@@ -207,12 +207,7 @@
     display: flex;
     flex-direction: row;
   }
-
-  /* .create-button button {
-    padding: 18px;
-    left: 10px;
-  } */
-
+  
   .release-hitory {
     padding-left: 30px;
     width: 70%;

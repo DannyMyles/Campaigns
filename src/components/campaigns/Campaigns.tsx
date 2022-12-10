@@ -5,7 +5,6 @@ import deposit_creation from "../../images/campaing/deposit_creation.svg";
 import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
 import location from "../../images/campaing/location.svg";
 import user_configuration from "../../images/campaing/user-configurations.svg";
-import buy_goods from "../../images/campaing/buy_goods.svg";
 import arrow_drop from "../../images/campaing/arrow_drop.svg";
 import { useEffect, useState } from "react";
 import CreatCampaigns from "../createCampaigns/CreatCampaigns";
@@ -47,7 +46,9 @@ const Campaigns = () => {
 
   // Change page
   const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
-
+ 
+  //Redirect 
+  
   return (
     <div className="top-header">
       <div className="profile">
