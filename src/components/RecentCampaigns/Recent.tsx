@@ -1,14 +1,24 @@
+import { useState } from "react";
 import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
+import Modal from "../modal/Modal";
+import { Popup } from "../popup/Popup";
 interface RecentProps {
   campaings: any;
   loading: boolean;
 }
 const Recent = ({ campaings }: RecentProps) => {
+  const [openModal, setOpenModal] = useState(false);
   return (
     <div>
       {campaings.map((campaign: any, i: number) => (
         <>
-          <div className="campaign" key={i}>
+          <div
+            onClick={() => {
+              setOpenModal(true);
+            }}
+            className="campaign"
+            key={i}
+          >
             <div className="logo">
               <img src={mpesa_xpress} alt="buy_goods" />
             </div>
@@ -24,6 +34,12 @@ const Recent = ({ campaings }: RecentProps) => {
                 <span className="IOS">Coprate</span>
               </div>
             </div>
+
+            {openModal && (
+              <Modal setOpenModal={setOpenModal}>
+                <Popup setOpenModal={setOpenModal} />
+              </Modal>
+            )}
           </div>
         </>
       ))}
