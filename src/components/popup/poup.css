@@ -5,10 +5,11 @@
   max-width: 488px;
   padding: 2rem;
   gap: 1rem;
-  border: 1px solid rgb(238, 231, 231);
+  /* border: 1px solid rgb(238, 231, 231); */
   border-radius: 2rem;
   top: 60%;
   right: 5%;
+  background-color: #fff;
 }
 .device {
   display: flex;

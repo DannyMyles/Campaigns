@@ -1,10 +1,14 @@
 import "./poup.css";
-import buy_goods from "../../images/campaing/buy_goods.svg";
-export const Popup = () => {
+import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
+
+type PopupProps = {
+  setOpenModal: any;
+};
+export const Popup = ({setOpenModal}:PopupProps) => {
   return (
     <div className="popup">
       <div className="vector">
-        <img src={buy_goods} alt="" />
+      <img src={mpesa_xpress} alt="buy_goods" />
       </div>
       <div className="info">
         <div className="">
