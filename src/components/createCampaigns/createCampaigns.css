@@ -70,7 +70,7 @@ placeholder{
     line-height: 75px;
     padding: 5px;
 } 
-.os-check{
+.checkbox{
     justify-content: space-between;
     display: flex;
 }
@@ -118,7 +118,6 @@ placeholder{
   background-color: rgba(234, 234, 236, 0.58);
   font-family: Lato;
   font-size: 16px;
-  font-weight: 600;
   background-color: rgb(230, 228, 228);
   justify-content: center
 }
@@ -197,5 +196,30 @@ color: red;
 }
 input[type='file']{
     display: none;
+    
+}
+ input[type='checkbox']{
+
+    width: 15px;
+        height: 15px;
+        padding: 0;
+        margin-right: 10px;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+ }
+ .Create-New-Campaign{
+    margin: 50px 100px 0 0px; 
+    font-family: Lato;
+    font-size: 12px;
+    text-align: left;
+
+ }
+.Select-Devices{
+
+    margin: 50px 100px 0 0px; 
+    font-family: Lato;
+    font-size: 12px;
+    text-align: left;
     
 }

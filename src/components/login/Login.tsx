@@ -1,7 +1,7 @@
 import './login.css'
 import Imlogo from "../../images/Imlogo.svg";
 import { useContext, useState } from 'react';
-
+import {Routes, Route, useNavigate} from 'react-router-dom';
 // import {signIn} from "../../utilites/user"
 interface LoginData{
   username:string,
@@ -42,6 +42,11 @@ const Login = () => {
       //   // setUser(user);
       //  })
       }
+      // Navigation to Campaigns
+      const navigate = useNavigate();
+      const navigateToCampaign = () => {
+        navigate('/Campaign');
+      };
     
       return (
         <div className="login-container">
@@ -77,7 +82,7 @@ const Login = () => {
                 <input type="password" placeholder="Enter your password" required name="password" value={loginData.password} onChange={handleChange} />
               </div>
               <div className="input-box">
-                <button type="submit">Login</button>
+                <button type="submit" onClick={navigateToCampaign}>Login</button>
               </div>
     
               <div className="input-forgot">
