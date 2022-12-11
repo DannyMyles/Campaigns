@@ -33,6 +33,11 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "moduleNameMapper": {
+      "axios": "axios/dist/node/axios.cjs"
+    }
+  },
   "browserslist": {
     "production": [
       ">0.2%",
@@ -56,4 +61,5 @@
     "react-router-dom": "^6.4.3",
     "react-test-renderer": "^18.2.0"
   }
+  
 }

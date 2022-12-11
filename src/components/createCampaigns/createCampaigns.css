@@ -64,13 +64,7 @@ placeholder {
 }
 
 .description {
-  height: 75px;
-  line-height: 75px;
-  padding: 5px;
-}
-.os-check {
-  justify-content: space-between;
-  display: flex;
+ 
 }
 .form-actions {
   display: flex;
@@ -112,7 +106,6 @@ placeholder {
   background-color: rgba(234, 234, 236, 0.58);
   font-family: Lato;
   font-size: 16px;
-  font-weight: 600;
   background-color: rgb(230, 228, 228);
   justify-content: center;
 }
@@ -185,3 +178,4 @@ div.Corporate {
 .alert {
   color: red;
 }
+ 
