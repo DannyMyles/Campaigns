@@ -34,15 +34,15 @@ const Recent = ({ campaings }: RecentProps) => {
                 <span className="IOS">Coprate</span>
               </div>
             </div>
-
-            {openModal && (
-              <Modal setOpenModal={setOpenModal}>
-                <Popup setOpenModal={setOpenModal} />
-              </Modal>
-            )}
           </div>
         </>
       ))}
+
+      {openModal && (
+        <Modal setOpenModal={setOpenModal}>
+          <Popup />
+        </Modal>
+      )}
     </div>
   );
 };

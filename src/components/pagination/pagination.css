@@ -19,3 +19,16 @@ li{
     color: #9b9b9b;
     
 }
+
+@media (max-width:480px) {
+    .page-item{
+        display: none;
+    }
+    .paginate ul{
+       justify-content: center; 
+       /* gap: .7rem; */
+    }
+    .pagenext{
+        display: none;
+    }
+}

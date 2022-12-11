@@ -86,9 +86,9 @@ const Campaigns = () => {
                 <span> Nairobi, Kenya</span>
               </div>
 
-              <div>
+              <div className="date">
                 <span>
-                  <a href="#">Saturday 06, June | 2210Hrs</a>{" "}
+                 Saturday 06, June | 2210Hrs
                 </span>
               </div>
             </div>
