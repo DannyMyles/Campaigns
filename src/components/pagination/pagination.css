@@ -1,10 +1,13 @@
+.paginate{
+    justify-content: baseline;
+    align-items: center;
+}
 .paginate ul{
     display: flex;
     gap: 0.3rem;
     justify-content: flex-end;
     cursor: pointer;
    color: #000;
-   /* padding: 0.3rem; */
 }
 li{
     list-style: none;   

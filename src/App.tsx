@@ -11,7 +11,6 @@ function App() {
       <Routes>
         <Route path="" element={<Login />}></Route>
         <Route path="/campaign" element={<Campaigns />}></Route>
-        <Route path="/pop" element={ <Popup />}></Route>
       </Routes>
     </BrowserRouter>
   );

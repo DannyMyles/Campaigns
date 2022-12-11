@@ -2,9 +2,9 @@ import "./campaigns.css";
 import Imlogo from "../../images/Imlogo.svg";
 import create_campaign from "../../images/campaing/create_campaign.svg";
 import deposit_creation from "../../images/campaing/deposit_creation.svg";
-import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
+// import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
 import location from "../../images/campaing/location.svg";
-import user_configuration from "../../images/campaing/user-configurations.svg";
+// import user_configuration from "../../images/campaing/user-configurations.svg";
 import arrow_drop from "../../images/campaing/arrow_drop.svg";
 import { useEffect, useState } from "react";
 import CreatCampaigns from "../createCampaigns/CreatCampaigns";
@@ -46,9 +46,9 @@ const Campaigns = () => {
 
   // Change page
   const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
- 
-  //Redirect 
-  
+
+  //Redirect
+
   return (
     <div className="top-header">
       <div className="profile">
@@ -58,14 +58,14 @@ const Campaigns = () => {
           </div>
           <div className="name-profile">
             <div className="name-icon ">
-                <span>JK</span>
+              <span>JK</span>
             </div>
-              <div className="name-title">
-                <span>John Jon M</span>
-              </div>
-              <div className="drop-down">
-                <img src={arrow_drop} alt="" />
-              </div>
+            <div className="name-title">
+              <span>John Jon M</span>
+            </div>
+            <div className="drop-down">
+              <img src={arrow_drop} alt="" />
+            </div>
           </div>
         </div>
       </div>
@@ -76,18 +76,21 @@ const Campaigns = () => {
             <h4>Hello John! Here's your recent feature release activity.</h4>
           </div>
           <div className="campaign-address">
-            <div className="line"></div>
+            <div className="lineup"></div><div className="line"></div>
             <div className="location">
               <div>
                 {" "}
                 <img src={location} alt="" />
               </div>
-              <span> Nairobi, Kenya</span>
+              <div>
+                <span> Nairobi, Kenya</span>
+              </div>
 
-              <span>
-                {" "}
-                <a href="#">Saturday 06, June | 2210Hrs</a>{" "}
-              </span>
+              <div>
+                <span>
+                  <a href="#">Saturday 06, June | 2210Hrs</a>{" "}
+                </span>
+              </div>
             </div>
           </div>
         </div>
@@ -135,11 +138,11 @@ const Campaigns = () => {
             <Recent campaings={currentCampaing} loading={loading} />
           </div>
           <div>
-          <Pagination
-            CampaingPerPage={campaingPerPage}
-            totalCampaings={campaings.length}
-            paginate={paginate}
-          />
+            <Pagination
+              CampaingPerPage={campaingPerPage}
+              totalCampaings={campaings.length}
+              paginate={paginate}
+            />
           </div>
         </div>
       </div>
