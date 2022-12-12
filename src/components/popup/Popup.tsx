@@ -3,8 +3,9 @@ import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
 
 type PopupProps = {
   setOpenModal: any;
+  selectedCampaign:any
 };
-export const Popup = () => {
+export const Popup = ({selectedCampaign,setOpenModal}:PopupProps) => {
   return (
     <div className="popup modal-position">
       <div className="vector">
@@ -12,7 +13,7 @@ export const Popup = () => {
       </div>
       <div className="info">
         <div className="">
-          <h4>Buy Goods and Services</h4>
+          <h4>{selectedCampaign.title}</h4>
         </div>
         <div className="device">
           <div className="os-icon">
@@ -24,14 +25,11 @@ export const Popup = () => {
         </div>
         <div className="descriptions">
           <span>
-            Mpesa Xpress feature is a new feature that enssures customers are
-            able to make direct deposits from there mobile wallet to their bank
-            accounts.
+            {selectedCampaign.body}
           </span>
         </div>
         <div className="resend-btn">
-          <div><button >Cancel</button></div>
-          <div><button>Resend</button></div>
+          <div><button onClick={()=>setOpenModal(false)}>Resend</button></div>
         </div>
       </div>
     </div>
