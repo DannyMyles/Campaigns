@@ -5,6 +5,20 @@
   border-radius: 10px;
 }
 
+.modal:has(div.modal-position){
+  /* background: red; */
+  align-self:flex-end;
+  margin: 0 6em 6em 0;
+  border-radius: 2rem;
+}
+
+.modalBackground:has(div.modal-position){
+
+  justify-content: end;
+
+}
+
+
 .cancelIcon button{
   margin-bottom: 5px;
   float: right;  
