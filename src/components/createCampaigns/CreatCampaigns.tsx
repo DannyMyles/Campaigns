@@ -19,7 +19,7 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   const [description,setDescription]=useState("");
   const [isDescriptionTouched, setDescriptionTouched] = 
     useState(false);
-  const[selectimage,setImage]=useState<File| Blob>(); 
+  const[selectimage,setImage]=useState<File>(); 
   const [isImageTouched, setIsImageTouched] = useState(false);
 
   const isTitleValid= title.trim()!=="";
@@ -33,14 +33,11 @@ isDescriptionTouched;
   if(isTitleValid && isDescriptionValid && isImageValid){
     isFormValid=true;
   }
-  let errMessage = "";
-  
   const handleChangetitle=(e: any) =>{
     setTitle(e.target.value)
   }
   const handleblurTitle=( )=>{
    setIsTitleTouched(true);
-
   }
 const handleChangedescription=(e: any)=> {
     setDescription(e.target.value)
@@ -63,18 +60,19 @@ setIsImageTouched(true);
   setIsTitleTouched(false);
   setDescription("");
   setDescriptionTouched(false);
- 
+  if (!selectimage){
+    return}
   setIsImageTouched(false)
 
 console.log(title, description, selectimage);
    
-    // axios({
-    //   method: "post",
-    //   url: "https://jsonplaceholder.typicode.com/posts ",
-    //   data: { setDescription,setTitle },
-    // }).then(({ data }) => {
-    //   console.log("Succesfully uploaded: ", JSON.stringify(data));
-    // });
+     axios({
+    method: "post",
+    url: "https://jsonplaceholder.typicode.com/posts ",
+     data: { title,description,selectimage },
+     }).then(({ data }) => {
+     console.log("Succesfully uploaded: ", JSON.stringify(data));
+     });
 
     console.log(handleSubmit)
   };
@@ -168,17 +166,9 @@ console.log(title, description, selectimage);
               placeholder="Drag and Drop or browse to choose file"
             /><br/>
           
-{selectimage ? (
-<div>
-  <p>Filename: {File.name}</p> 
+      <p>Select a file to show details</p>
 
-</div>
-
-) : (
-
-<p>Select a file to show details</p>
-
-)}
+<div>{selectimage && `${selectimage.name} - ${selectimage.type}`}</div>
           </label>
           <p>Drag and Drop or browse to choose a file</p>
           
