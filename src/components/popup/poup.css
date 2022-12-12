@@ -1,14 +1,16 @@
 .popup {
   display: flex;
   justify-content: center;
-  position: absolute;
+  /*position: absolute;
+  */align-self: flex-end;
   max-width: 488px;
   padding: 2rem;
   gap: 1rem;
-  border: 1px solid rgb(238, 231, 231);
-  border-radius: 2rem;
+  /*border: 1px solid rgb(238, 231, 231);
+  */
   top: 60%;
   right: 5%;
+  background-color: #fff;
 }
 .device {
   display: flex;

@@ -1,11 +1,13 @@
+
 import "./createCampaigns.css";
 import upload from "../../images/campaing/upload.svg";
 import removeIcon from "../../images/campaing/remove.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import internal from "stream";
 import { isNullishCoalesce } from "typescript";
 // import Campaigns from "../createCampaigns/createFormvalidation";
+
+
 type CreateCampaignsProps = {
   setOpenModal: Function;
   
@@ -14,6 +16,7 @@ type CreateCampaignsProps = {
  
   
 const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
+
   const [title,setTitle]=useState("");
   const [isTitleTouched, setIsTitleTouched] = useState(false);
   const [description,setDescription]=useState("");
@@ -21,7 +24,6 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
     useState(false);
   const[selectimage,setImage]=useState<File>(); 
   const [isImageTouched, setIsImageTouched] = useState(false);
-
   const isTitleValid= title.trim()!=="";
   const hasTitleError=!isTitleValid && isTitleTouched;
   const isDescriptionValid=description.trim()!=="";
@@ -32,7 +34,8 @@ isDescriptionTouched;
   let isFormValid=false;
   if(isTitleValid && isDescriptionValid && isImageValid){
     isFormValid=true;
-  }
+
+   }
   const handleChangetitle=(e: any) =>{
     setTitle(e.target.value)
   }
@@ -86,15 +89,20 @@ console.log(title, description, selectimage);
           <div>
             <h5>Select Devices</h5>
           </div>
+
+          <div className='Select-Devices'><h3>Select Devices</h3></div>
+ 
         </div>
          
         <div className="checkbox">
           <label>
+
             <input
               type="checkbox"
               value='All'
                
             />
+
             All
           </label>
           <label>
@@ -108,8 +116,10 @@ console.log(title, description, selectimage);
           <label>
             <input
               type="checkbox"
+
               value='Corporate'
-               
+              
+              
 
             />
             Corporate
@@ -118,7 +128,9 @@ console.log(title, description, selectimage);
          
         </div>
         <div className="input-box">
+
           <div className="addTitle">
+           
            
             <label>Add Campaign Title</label>
           </div>
@@ -131,15 +143,18 @@ console.log(title, description, selectimage);
            
           />
     
+ 
 
           <div className="addTitle">
             <label>Add Campaign Description</label>
           </div>
           <input
             type="text"
+
             value={description}
             onBlur={handleblurDescription}
              onChange={handleChangedescription}
+ 
             name="description"
             className="description"
             placeholder="Enter description"
@@ -149,6 +164,8 @@ console.log(title, description, selectimage);
         <div className="uploadFile">
           
           <h4>Upload Icon</h4>
+
+         
         </div>
         <div className="uploadIcon">
           <label>
@@ -160,6 +177,7 @@ console.log(title, description, selectimage);
               autoComplete="off"
               onBlur={handleblurImage}
             />
+
             <img
               src={upload}
               alt=""
@@ -169,6 +187,8 @@ console.log(title, description, selectimage);
       <p>Select a file to show details</p>
 
 <div>{selectimage && `${selectimage.name} - ${selectimage.type}`}</div>
+
+           
           </label>
           <p>Drag and Drop or browse to choose a file</p>
           
@@ -177,6 +197,7 @@ console.log(title, description, selectimage);
         <div className="form-actions">
           <div className="btn-icons">
             <button>
+ 
               <img src={removeIcon} alt="Remove" /> <span>Remove</span>
             </button>
           </div>
@@ -186,8 +207,14 @@ console.log(title, description, selectimage);
             </div>
             <div>
               <button type="submit" disabled={!isFormValid ? true: false}> Create </button>
+              <button
+              >
+                Cancel
+              </button>
+              <button>Cancel</button>
+
             </div>
-          </div>
+            </div>
         </div>
       </form>
     </div>

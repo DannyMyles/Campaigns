@@ -1,12 +1,12 @@
 .campaign-form {
-      border-radius: 10px;  
-    background-color: #fff;
-     width: 400px; 
-    height: 100%;
+  border-radius: 10px;
+  background-color: #fff;
+  width: 400px;
+  height: 100%;
 }
- 
+
 input[type="file"] {
-    display: none;
+  display: none;
 }
 .upload {
     width: 100%;
@@ -58,32 +58,58 @@ input[type=text] {
         
 }
 placeholder{
-    color:rgba(155, 155, 155,0.56)
+    color:rgba(155, 155, 155,0
+   
 
+.input-box .description:last-child {
+  width: 100%;
+  flex-grow: 0;
+  margin: 18px 0 0;
+  padding: 23px 200px 102px 21px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
 }
-.description placeholder{
-    padding-bottom: 15px;
+
+.uploadIcon {
+  width: 100%;
+  height: 70%;
+  padding: 50px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  border-radius: 8px;
+  text-align: center;
+}
+input[type="text"] {
+  width: 100%;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background-color: #f3f3f3;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+placeholder {
+  color: rgba(155, 155, 155, 0.56);
+}
+.description placeholder {
+  padding-bottom: 15px;
 }
 
 .description {
-    height: 75px;
-    line-height: 75px;
-    padding: 5px;
-} 
-.checkbox{
-    justify-content: space-between;
-    display: flex;
+ 
 }
 .form-actions {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .form-actions :first-child {
-    margin-top:5px;
-     display: flex;
-    justify-content: space-between;
+  margin-top: 5px;
+  display: flex;
+  justify-content: space-between;
 }
+ 
 .campaignTitle :first-child{
     margin: 12px 3px 0 0px;
     text-align: left;
@@ -93,15 +119,15 @@ placeholder{
     margin-bottom:10px;
     margin: 12px 3px 0 0px;
     font-size: 12;
+ 
 }
-.action-right{
-    display: flex;
-    gap: 0.5rem;
-    text-align: center;
-    justify-content: center;
-     
+.action-right {
+  display: flex;
+  gap: 0.5rem;
+  text-align: center;
+  justify-content: center;
 }
-.action-right div:first-child button{
+.action-right div:first-child button {
   width: 100px;
   height: 39px;
   padding: 5px 20px 5px 20px;
@@ -109,53 +135,53 @@ placeholder{
   background-color: transparent;
   margin-top: 5px;
   border: none;
-   
 }
-.action-right div:last-child button{
- width: 100px;
+.action-right div:last-child button {
+  width: 100px;
   height: 39px;
+
    flex-grow: 0; 
   padding: 5px 30px 5px 20px;
-   border-radius: 9px; 
+   border-radius: 9px;
+ 
   background-color: rgba(234, 234, 236, 0.58);
   font-family: Lato;
   font-size: 14px;
   background-color: rgb(230, 228, 228);
-  justify-content: center
+  justify-content: center;
 }
- 
-.btn-container{
-    display: flex;
+
+.btn-container {
+  display: flex;
 }
 
 span {
-    padding: 5px;
+  padding: 5px;
 }
 .btn-icons {
-    line-height: 24px;
-    text-align: center;   
-    padding-right: 30px;
-    font-stretch: normal;
-    font-style: normal;
-    padding-right: 100px;
+  line-height: 24px;
+  text-align: center;
+  padding-right: 30px;
+  font-stretch: normal;
+  font-style: normal;
+  padding-right: 100px;
 }
- 
 
 button img {
-    width: 22px;
-    height: 22px;
-    vertical-align: middle;
+  width: 22px;
+  height: 22px;
+  vertical-align: middle;
 }
- 
- .heading{
-    text-align:left;
-    margin-bottom: 1rem;
 
+.heading {
+  text-align: left;
+  margin-bottom: 1rem;
 }
-div.uploadFile{
-    text-align:left;
-    padding-top:10px;
+div.uploadFile {
+  text-align: left;
+  padding-top: 10px;
 }
+
 label{
     text-align:left;
     padding: top 30px;
@@ -164,43 +190,44 @@ label{
 }
 .btn-icons span{
 
-    padding: right 5px ; 
+    padding: right 5px ;
+
 }
- 
-div.heading{
-    text-align:left;
-    padding-bottom:10px; 
+.btn-icons span {
+  padding: right 5px;
 }
-div.subheading{
-    text-align:left;
-    padding-top:10px; 
+
+div.heading {
+  text-align: left;
+  padding-bottom: 10px;
 }
-.upload-text{
-    text-align:left;
-    padding-top:10px;
+div.subheading {
+  text-align: left;
+  padding-top: 10px;
 }
-.upload-text-addtitle{
-    padding-bottom:10px; 
+.upload-text {
+  text-align: left;
+  padding-top: 10px;
 }
-div.Web{
-    padding-left: 30px;
+.upload-text-addtitle {
+  padding-bottom: 10px;
 }
-div.Android{
-    padding-left: 30px;
+div.Web {
+  padding-left: 30px;
 }
-div.iOS{
-    padding-left: 30px;
+div.Android {
+  padding-left: 30px;
 }
-div.Corporate{
-    padding-left: 30px;
+div.iOS {
+  padding-left: 30px;
 }
-.alert{
-color: red;
+div.Corporate {
+  padding-left: 30px;
 }
-input[type='file']{
-    display: none;
-    
+.alert {
+  color: red;
 }
+
  input[type='checkbox']{
 
     width: 15px;
@@ -232,3 +259,5 @@ addDescription{
     margin: 0 6px 1px 1px;
 
 }
+
+ 
