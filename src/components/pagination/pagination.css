@@ -1,10 +1,13 @@
+.paginate{
+    justify-content: baseline;
+    align-items: center;
+}
 .paginate ul{
     display: flex;
     gap: 0.3rem;
     justify-content: flex-end;
     cursor: pointer;
    color: #000;
-   /* padding: 0.3rem; */
 }
 li{
     list-style: none;   
@@ -15,4 +18,17 @@ li{
 .arrowback{
     color: #9b9b9b;
     
+}
+
+@media (max-width:480px) {
+    .page-item{
+        display: none;
+    }
+    .paginate ul{
+       justify-content: center; 
+       /* gap: .7rem; */
+    }
+    .pagenext{
+        display: none;
+    }
 }
