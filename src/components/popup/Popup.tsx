@@ -29,7 +29,7 @@ export const Popup = ({selectedCampaign,setOpenModal}:PopupProps) => {
           </span>
         </div>
         <div className="resend-btn">
-          <div><button onClick={()=>setOpenModal(false)}>Resend</button></div>
+          <div><button onClick={()=>setOpenModal(false)}>Close</button></div>
         </div>
       </div>
     </div>
