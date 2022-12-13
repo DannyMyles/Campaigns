@@ -10,7 +10,7 @@ const Modal = ({ setOpenModal, children }) => {
               setOpenModal(false);
             }}
           >
-            <img src={cancelIcon} alt="cancel" />{" "}
+            <img src={cancelIcon} alt="cancel" />
           </button>
         </div>
         {children}

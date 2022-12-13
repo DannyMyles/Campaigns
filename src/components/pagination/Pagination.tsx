@@ -11,12 +11,12 @@ const Pagination = ({ CampaingPerPage, totalCampaings, paginate }: any) => {
   return (
     <div className="paginate">
       <ul>
-        <div className="arrowback">
+        <li className="arrowback">
           <span>
             <MdArrowBackIos />
           </span>
-          <span>Prev</span>
-        </div>
+          <span className="pagenext">Prev</span>
+        </li>
         {pageNumbers.map((page, number) => (
           <li key={number} className="page-item">
             <a onClick={() => paginate(page)} className="page-link">
@@ -24,12 +24,12 @@ const Pagination = ({ CampaingPerPage, totalCampaings, paginate }: any) => {
             </a>
           </li>
         ))}
-        <div>
-          <span>Next</span>
+        <li >
+          <span className="pagenext">Next</span>
           <span>
             <MdArrowForwardIos />
           </span>
-        </div>
+        </li>
       </ul>
     </div>
   );

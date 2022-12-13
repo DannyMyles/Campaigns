@@ -3,8 +3,6 @@ import upload from "../../images/campaing/upload.svg";
 import removeIcon from "../../images/campaing/remove.svg";
 import { useEffect, useState } from "react";
 import axios from "axios";
-
-// import Campaigns from "../createCampaigns/createFormvalidation";
 type CreateCampaignsProps = {
   setOpenModal: Function;
 };
@@ -25,10 +23,10 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   if (isTitleValid && isDescriptionValid && isImageValid) {
     isFormValid = true;
   }
+  let now = new Date();
   const checkAllHandler = (e: any) => {
     setCheckedAll(!ischecked);
-    setIsChecked(e.target.value)
-     
+    setIsChecked(e.target.value);
   };
   const handleChangetitle = (e: any) => {
     setTitle(e.target.value);
@@ -70,42 +68,47 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
       console.log("Succesfully uploaded: ", JSON.stringify(data));
     });
   };
+  
+ 
   return (
     <div className="campaign-form">
-      <form onSubmit={handleSubmit} className="campian-form">
+        
+      <form onSubmit={handleSubmit} className="campian-form" autoComplete="off">
+      
         <div className="campaignTitle">
-          <div>
-            <h2>Create New Campaign</h2>
+          
+          <span>Create New Campaign</span>
+        </div>
+        <div className="select-devices">
+          <div className="heading">
+            <span>Select Devices</span>
           </div>
-          <div>
-            <h5>Select Devices</h5>
+          <div className="device-selection">
+            <div>
+              <input type="checkbox" value="All" />
+              <label>All</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                checked={ischecked === "Retail"}
+                value="Retail"
+                onChange={checkAllHandler}
+              />
+              <label htmlFor="">Retail</label>
+            </div>
+            <div>
+              <input
+                type="checkbox"
+                value="Corporate"
+                checked={ischecked === "Corporate"}
+                onChange={checkAllHandler}
+              />
+              <label htmlFor="">Corporate</label>
+            </div>
           </div>
         </div>
 
-        <div className="checkbox">
-          <label>
-            <input type="checkbox" value="All"   />
-            All
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={ischecked==="Retail"}
-              value="Retail"
-              onChange={checkAllHandler}
-            />
-            Retail
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              value="Corporate"
-              checked={ischecked==="Corporate"}
-              onChange={checkAllHandler}
-            />
-            Corporate
-          </label>
-        </div>
         <div className="input-box">
           <div className="addTitle">
             <label>Add Campaign Title</label>
@@ -144,6 +147,7 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
               autoComplete="off"
               onBlur={handleblurImage}
             />
+
             <img
               src={upload}
               alt=""
@@ -152,26 +156,17 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
             <br />
           </label>
           <p>Drag and Drop or browse to choose a file</p>
-
           <div>
-            {selectimage && `${selectimage.name} - ${selectimage.type}`}
+  {selectimage && `${selectimage.name} - ${selectimage.type}`}
           </div>
         </div>
         <div className="form-actions">
-          {/* <div className="btn-icons">
-            <button>
-              <img src={removeIcon} alt="Remove" /> <span>Remove</span>
-            </button>
-          </div> */}
           <div className="action-right">
             <div>
               <button type="reset">Cancel</button>
             </div>
             <div>
-              <button type="submit" disabled={!isFormValid ? true : false}>
-                {" "}
-                Create{" "}
-              </button>
+              <button type="submit" disabled={!isFormValid ? true : false}> Create</button>
             </div>
           </div>
         </div>

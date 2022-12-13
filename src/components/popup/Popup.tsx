@@ -1,10 +1,14 @@
 import "./poup.css";
-import buy_goods from "../../images/campaing/buy_goods.svg";
+import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
+
+type PopupProps = {
+  setOpenModal: any;
+};
 export const Popup = () => {
   return (
-    <div className="popup">
+    <div className="popup modal-position">
       <div className="vector">
-        <img src={buy_goods} alt="" />
+      <img src={mpesa_xpress} alt="buy_goods" />
       </div>
       <div className="info">
         <div className="">
@@ -26,7 +30,7 @@ export const Popup = () => {
           </span>
         </div>
         <div className="resend-btn">
-          <div><button>Cancel</button></div>
+          <div><button >Cancel</button></div>
           <div><button>Resend</button></div>
         </div>
       </div>
