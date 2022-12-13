@@ -9,24 +9,57 @@ input[type="file"] {
   display: none;
 }
 .upload {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
 }
-input[type="text"] {
-  width: 100%;
-  height: 54px;
-  margin: 19px 0 0;
-  padding: 10px 267px 11px 23px;
-  border-radius: 8px;
-  background-color: #f3f3f3;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+    input[type=text]{
+        width: 100%;
+        height: 54px;
+        margin: 19px 0 0;
+        padding: 10px 100px 11px 23px;
+        border-radius: 8px;
+        background-color: #F3F3F3;
+         border: 1px solid #ccc; 
+        box-sizing: border-box;    
+    }
+    
+    .input-box .description:last-child {
+        width: 100%;
+        flex-grow: 0;
+        margin: 18px 0 0; 
+        padding: 23px 200px 102px 21px;   
+        border-radius: 8px;
+        background-color: #f3f3f3;
+    } 
+   
+.uploadIcon{
+        width: 100%;
+        height: 70%;
+        padding: 50px;
+        border-radius: 8px;
+        background-color:#F3F3F3;
+        border-radius: 8px;
+        text-align: center;
+    }
+input[type=text] {
+    width: 100%;
+        padding: 12px 20px;
+        border-radius: 8px;
+        background-color: #F3F3F3;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        
 }
+placeholder{
+    color:rgba(155, 155, 155,0
+   
 
 .input-box .description:last-child {
   width: 100%;
@@ -76,11 +109,17 @@ placeholder {
   display: flex;
   justify-content: space-between;
 }
-.campaignTitle :first-child {
-  margin-top: 5px;
+ 
+.campaignTitle :first-child{
+    margin: 12px 3px 0 0px;
+    text-align: left;
+    font-size: 12;
 }
-.campaignTitle :last-child {
-  margin-top: 5px;
+.campaignTitle :last-child{
+    margin-bottom:10px;
+    margin: 12px 3px 0 0px;
+    font-size: 12;
+ 
 }
 .action-right {
   display: flex;
@@ -100,12 +139,14 @@ placeholder {
 .action-right div:last-child button {
   width: 100px;
   height: 39px;
-  flex-grow: 0;
-  padding: 5px 20px 5px 20px;
-  /* border-radius: 9px; */
+
+   flex-grow: 0; 
+  padding: 5px 30px 5px 20px;
+   border-radius: 9px;
+ 
   background-color: rgba(234, 234, 236, 0.58);
   font-family: Lato;
-  font-size: 16px;
+  font-size: 14px;
   background-color: rgb(230, 228, 228);
   justify-content: center;
 }
@@ -140,9 +181,17 @@ div.uploadFile {
   text-align: left;
   padding-top: 10px;
 }
-.addTitle label {
-  text-align: left;
-  padding: top 30px;
+
+label{
+    text-align:left;
+    padding: top 30px;
+    
+
+}
+.btn-icons span{
+
+    padding: right 5px ;
+
 }
 .btn-icons span {
   padding: right 5px;
@@ -178,4 +227,37 @@ div.Corporate {
 .alert {
   color: red;
 }
+
+ input[type='checkbox']{
+
+    width: 15px;
+        height: 15px;
+        padding: 0;
+        margin-right: 10px;
+        vertical-align: bottom;
+        position: relative;
+        top: -1px;
+ }
+ .Create-New-Campaign{
+    margin: 50px 100px 0 0px; 
+    font-family: Lato;
+    font-size: 12px;
+    text-align: left;
+
+ }
+.Select-Devices{
+
+    margin: 50px 100px 0 0px; 
+    font-family: Lato;
+    font-size: 12px;
+    text-align: left;
+}
+.addTitle{
+    margin: 0 6px 1px 1px;
+}
+addDescription{
+    margin: 0 6px 1px 1px;
+
+}
+
  

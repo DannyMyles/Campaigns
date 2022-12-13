@@ -1,147 +1,172 @@
 import "./createCampaigns.css";
 import upload from "../../images/campaing/upload.svg";
 import removeIcon from "../../images/campaing/remove.svg";
-import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import internal from "stream";
 // import Campaigns from "../createCampaigns/createFormvalidation";
 type CreateCampaignsProps = {
   setOpenModal: Function;
+  
 };
-type FormValues = {
-  title: string;
-  description: string;
-  image: any;
-};
+  
 const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
-  const {
-    register,
-    handleSubmit,
-    reset,
-    formState: { errors, isSubmitted },
-  } = useForm<FormValues>();
-  const [os, setOs] = useState("All");
-  function handlecheckBox(evt: any) {
-    console.log(evt.target.value);
-    setOs(evt.target.value);
-  }
+  const [title,setTitle]=useState("");
+  const [isTitleTouched, setIsTitleTouched] = useState(false);
+  const [description,setDescription]=useState("");
+  const [isDescriptionTouched, setDescriptionTouched] = 
+    useState(false);
+  const[image,setImage]=useState<File>();
+  const [isImageTouched, setIsImageTouched] = useState(false);
 
-  const onSubmit = (Data: any) => {
+  const isTitleValid= title.trim()!=="";
+  const hasTitleError=!isTitleValid && isTitleTouched;
+  const isDescriptionValid=description.trim()!=="";
+  const hasDescriptionError=!isDescriptionValid && 
+isDescriptionTouched;
+  const isImageValid=File!
+  const hasImageError=isImageValid && isImageTouched;
+  let isFormValid=false;
+  if(isTitleValid && isDescriptionValid && isImageValid){
+    isFormValid=true;
+  }
+  let errMessage = "";
+  
+  const handleChangetitle=(e: any) =>{
+    setTitle(e.target.value)
+  }
+  const handleblurTitle=( )=>{
+   setIsTitleTouched(true);
+
+  }
+const handleChangedescription=(e: any)=> {
+    setDescription(e.target.value)
+  }
+  const handleblurDescription=()=>{
+ setDescriptionTouched(true);
+  }
+const handleChangeImage=(e: any)=> {
+    setImage(e.target.files[0])
+  }
+  const handleblurImage=()=>{
+setIsImageTouched(true);
+  }
+  const handleSubmit = (e: any) => {
+  e.preventDefault();
+  setTitle("");
+  setIsTitleTouched(false);
+  setDescription("");
+  setDescriptionTouched(false);
+  const formData = new FormData();
+    // formData.append('file', image);
+    // formData.append('fileName', image.name);
+   
     axios({
       method: "post",
       url: "https://jsonplaceholder.typicode.com/posts ",
-      data: { register },
+      data: {  },
     }).then(({ data }) => {
       console.log("Succesfully uploaded: ", JSON.stringify(data));
     });
 
-    console.log(Data);
+    console.log(handleSubmit)
   };
   return (
     <div className="campaign-form">
-      <form onSubmit={handleSubmit(onSubmit)} className="campian-form">
+      <form onSubmit={handleSubmit} className="campian-form">
         <div className="campaignTitle">
           <div>
-            <h3>Add New Feature</h3>
+            <h3>Create New Campaign</h3>
           </div>
           <div>
             <h3>Select Devices</h3>
           </div>
         </div>
-        <div className="os-check">
+         
+        <div className="checkbox">
           <label>
             <input
               type="checkbox"
-              checked={os === "All"}
-              value="All"
-              onChange={handlecheckBox}
+              value='All'
+               
             />
             All
           </label>
           <label>
             <input
               type="checkbox"
-              checked={os === "web"}
-              value="web"
-              onChange={handlecheckBox}
+              value='Retail'
+               
             />
-            Web
+            Retail
           </label>
           <label>
             <input
               type="checkbox"
-              checked={os === "Android"}
-              value="Android"
-              onChange={handlecheckBox}
+              value='Corporate'
+               
+
             />
-            Android
+            Corporate
           </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={os === "iOS"}
-              value="iOS"
-              onChange={handlecheckBox}
-            />
-            iOS
-          </label>
-          <label>
-            <input
-              type="checkbox"
-              checked={os === "Corprate"}
-              value="Corprate"
-              onChange={handlecheckBox}
-            />
-            Corprate
-          </label>
+
+         
         </div>
         <div className="input-box">
           <div className="addTitle">
-            {" "}
+           
             <label>Add Campaign Title</label>
           </div>
           <input
             type="text"
-            {...register("title", { required: true })}
-            name="title"
+             onChange={handleChangetitle}
             placeholder="Enter title"
+            value={title}
+            onBlur={handleblurTitle}
+           
           />
-          {errors.title && <p className="alert">Enter title ! </p>}
+    
 
           <div className="addTitle">
             <label>Add Campaign Description</label>
           </div>
           <input
             type="text"
-            {...register("description", { required: true })}
+            value={description}
+            onBlur={handleblurDescription}
+             onChange={handleChangedescription}
             name="description"
             className="description"
             placeholder="Enter description"
           />
-          {errors.description && <p className="alert">Enter Description </p>}
+           
         </div>
         <div className="uploadFile">
-          {" "}
+          
           <h4>Upload Icon</h4>
         </div>
         <div className="uploadIcon">
           <label>
             <input
               type="file"
-              {...register("image", { required: true })}
+            onChange={handleChangeImage}
               name="image"
               className="file"
               autoComplete="off"
+              onBlur={handleblurImage}
             />
             <img
               src={upload}
               alt=""
-              placeholder="Drag and Drop or browse to choose a file"
-            />
+              placeholder="Drag and Drop or browse to choose file"
+            /><br/>
+          
+      <div>{image && `${image.name} - ${image.type}`}</div>
           </label>
           <p>Drag and Drop or browse to choose a file</p>
+          
+      
         </div>
-        {errors.image && <p>upload image </p>}
         <div className="form-actions">
           <div className="btn-icons">
             <button>
@@ -153,7 +178,7 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
               <button>Cancel</button>
             </div>
             <div>
-              <button type="submit"> Create </button>
+              <button type="submit" disabled={!isFormValid ? true: false}> Create </button>
             </div>
           </div>
         </div>
@@ -163,3 +188,4 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
 };
 
 export default CreatCampaigns;
+ 
