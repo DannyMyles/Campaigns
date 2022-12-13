@@ -58,9 +58,8 @@ input[type=text] {
         
 }
 placeholder{
-    color:rgba(155, 155, 155,0
-   
-
+    color:rgba(155, 155, 155,0)
+}
 .input-box .description:last-child {
   width: 100%;
   flex-grow: 0;
@@ -96,12 +95,10 @@ placeholder {
   padding-bottom: 15px;
 }
 
-.description {
  
-}
 .form-actions {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .form-actions :first-child {
@@ -110,17 +107,18 @@ placeholder {
   justify-content: space-between;
 }
  
-.campaignTitle :first-child{
-    margin: 12px 3px 0 0px;
+/* .campaignTitle :first-child{
+ margin: 12px 3px 0 0px; 
     text-align: left;
-    font-size: 12;
+    
 }
+ 
 .campaignTitle :last-child{
     margin-bottom:10px;
     margin: 12px 3px 0 0px;
     font-size: 12;
  
-}
+} */
 .action-right {
   display: flex;
   gap: 0.5rem;
@@ -259,5 +257,25 @@ addDescription{
     margin: 0 6px 1px 1px;
 
 }
-
- 
+/* new */
+.select-devices{
+display: flex;
+flex-direction: column;
+}
+ .device-selection{
+display: flex;
+justify-content: space-between;
+align-items: center;
+ }
+ .campaignTitle{
+  text-align: left;
+  padding-top: 1rem;
+  font-size: 20px;
+  color: #000;
+ }
+ .heading{
+  text-align: left;
+  font-size: 15px;
+  padding-top: 1rem;
+ }
+  

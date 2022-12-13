@@ -1,7 +1,7 @@
 import React from 'react'
 import {  render, screen } from '@testing-library/react';
-import Campaigns from '../campaigns/Campaigns';
-import CreatCampaigns from './CreatCampaigns';
+import Campaigns from '../components/campaigns/Campaigns';
+import CreatCampaigns from '../components/createCampaigns/CreatCampaigns';
  
 test('renders create campaign', ()=>{
  const{getByTestId,getByLabelText} =render(<Campaigns/>);
