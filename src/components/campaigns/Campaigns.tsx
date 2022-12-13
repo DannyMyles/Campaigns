@@ -10,7 +10,7 @@ import { useEffect, useState } from "react";
 import CreatCampaigns from "../createCampaigns/CreatCampaigns";
 import Modal from "../modal/Modal";
 import Pagination from "../pagination/Pagination";
-import axios from "axios";
+import { api } from "../data/api";
 import Recent from "../RecentCampaigns/Recent";
 
 export interface Campaign {
@@ -24,10 +24,10 @@ const Campaigns = () => {
   const [campaings, setCampaings] = useState<any>([]);
   const [currentPage, setCurrentPage] = useState(1);
   const [campaingPerPage] = useState(5);
-
+  
   const fetchPosts = async () => {
     setLoading(true);
-    const res = await axios.get("https://jsonplaceholder.typicode.com/posts");
+    const res = await api.get("/posts");
     setCampaings(res.data);
     setLoading(false);
   };

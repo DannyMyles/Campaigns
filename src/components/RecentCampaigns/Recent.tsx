@@ -8,6 +8,8 @@ interface RecentProps {
 }
 const Recent = ({ campaings }: RecentProps) => {
   const [openModal, setOpenModal] = useState(false);
+  const [selectedCampaign, setSelectedCampaign] = useState<any>(null);
+
   return (
     <div>
       {campaings.map((campaign: any, i: number) => (
@@ -15,6 +17,7 @@ const Recent = ({ campaings }: RecentProps) => {
           <div
             onClick={() => {
               setOpenModal(true);
+              setSelectedCampaign(campaign)
             }}
             className="campaign"
             key={i}
@@ -40,7 +43,10 @@ const Recent = ({ campaings }: RecentProps) => {
 
       {openModal && (
         <Modal setOpenModal={setOpenModal}>
-          <Popup />
+          <Popup
+            selectedCampaign={selectedCampaign}
+            setOpenModal={setOpenModal}
+          />
         </Modal>
       )}
     </div>
