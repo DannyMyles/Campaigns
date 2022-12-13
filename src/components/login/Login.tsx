@@ -8,11 +8,9 @@ interface LoginData {
   password: string;
 }
 
-const Login = () => {
-  let loginData: LoginData, setLoginData: any;
-  // const { user, setUser } = useContext(UserContext);
+const Login = () => {;
 
-  [loginData, setLoginData] = useState({
+  const [loginData, setLoginData] = useState({
     username: "",
     password: "",
   });
