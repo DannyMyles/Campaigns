@@ -19,7 +19,7 @@ export interface Campaign {
 }
 
 const Campaigns = () => {
-  const [openModal, setOpenModal] = useState(false);
+  const [openModal, setOpenModal] = useState<any| null>(false);
   const [loading, setLoading] = useState(false);
   const [campaings, setCampaings] = useState<any>([]);
   const [currentPage, setCurrentPage] = useState(1);
