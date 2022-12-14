@@ -1,12 +1,11 @@
 import "./createCampaigns.css";
 import upload from "../../images/campaing/upload.svg";
-import removeIcon from "../../images/campaing/remove.svg";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import axios from "axios";
 type CreateCampaignsProps = {
   setOpenModal: Function;
 };
-
+ 
 const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   const [title, setTitle] = useState("");
   const [isTitleTouched, setIsTitleTouched] = useState(false);
@@ -14,8 +13,8 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   const [isDescriptionTouched, setDescriptionTouched] = useState(false);
   const [selectimage, setImage] = useState<File>();
   const [isImageTouched, setIsImageTouched] = useState(false);
-  const [ischecked, setIsChecked] = useState();
-  const [checkedAll, setCheckedAll] = useState(false);
+  const [ischecked, setIsChecked] = useState([true,false]);
+  
   const isTitleValid = title.trim() !== "";
   const isDescriptionValid = description.trim() !== "";
   const isImageValid = File!;
@@ -23,11 +22,18 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
   if (isTitleValid && isDescriptionValid && isImageValid) {
     isFormValid = true;
   }
-  let now = new Date();
-  const checkAllHandler = (e: any) => {
-    setCheckedAll(!ischecked);
-    setIsChecked(e.target.value);
+
+  const checkAllHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setIsChecked([e.target.checked, e.target.checked]);
   };
+
+  const handleCheckRetail=(e: React.ChangeEvent<HTMLInputElement>)=>{
+    setIsChecked([e.target.checked, ischecked[1]]);
+  }
+const handleCheckCorporate=(e: React.ChangeEvent<HTMLInputElement>)=>{
+    setIsChecked([ischecked[0], e.target.checked]);
+
+}
   const handleChangetitle = (e: any) => {
     setTitle(e.target.value);
   };
@@ -68,32 +74,33 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
       console.log("Succesfully uploaded: ", JSON.stringify(data));
     });
   };
-  
- 
+
   return (
     <div className="campaign-form">
-        
       <form onSubmit={handleSubmit} className="campian-form" autoComplete="off">
-      
         <div className="campaignTitle">
-          
           <span>Create New Campaign</span>
         </div>
+
         <div className="select-devices">
           <div className="heading">
-            <span>Select Devices</span>
+            <span>Select Devices </span>
           </div>
+
           <div className="device-selection">
             <div>
-              <input type="checkbox" value="All" />
+              <input type="checkbox" value="All" checked={ischecked[0] && ischecked[1]} 
+            //   indeterminate={ischecked[0] !== ischecked[1]}
+              onChange= 
+                {checkAllHandler}/>
               <label>All</label>
             </div>
             <div>
               <input
                 type="checkbox"
-                checked={ischecked === "Retail"}
+                checked={ischecked[0]}
                 value="Retail"
-                onChange={checkAllHandler}
+                onChange={handleCheckRetail}
               />
               <label htmlFor="">Retail</label>
             </div>
@@ -101,63 +108,60 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
               <input
                 type="checkbox"
                 value="Corporate"
-                checked={ischecked === "Corporate"}
-                onChange={checkAllHandler}
+                checked={ischecked[1]}
+                onChange={handleCheckCorporate}
               />
               <label htmlFor="">Corporate</label>
             </div>
-          </div>
-        </div>
+</div>
+   <div className="input-box">  <span className="addTitle">Add Campaign Title</span>
 
-        <div className="input-box">
-          <div className="addTitle">
-            <label>Add Campaign Title</label>
-          </div>
-          <input
-            type="text"
-            onChange={handleChangetitle}
-            placeholder="Enter title"
-            value={title}
-            onBlur={handleblurTitle}
-          />
-
-          <div className="addTitle">
-            <label>Add Campaign Description</label>
-          </div>
-          <input
-            type="text"
-            value={description}
-            onBlur={handleblurDescription}
-            onChange={handleChangedescription}
-            name="description"
-            className="description"
-            placeholder="Enter description"
-          />
-        </div>
-        <div className="uploadFile">
-          <h4>Upload Icon</h4>
-        </div>
-        <div className="uploadIcon">
-          <label>
             <input
-              type="file"
-              onChange={handleChangeImage}
-              name="image"
-              className="file"
-              autoComplete="off"
-              onBlur={handleblurImage}
+              type="text"
+              onChange={handleChangetitle}
+              placeholder="Enter title"
+              value={title}
+              onBlur={handleblurTitle}
             />
 
-            <img
-              src={upload}
-              alt=""
-              placeholder="Drag and Drop or browse to choose file"
+            <div className="addTitle">
+              <label>Add Campaign Description</label>
+            </div>
+            <input
+              type="text"
+              value={description}
+              onBlur={handleblurDescription}
+              onChange={handleChangedescription}
+              name="description"
+              className="description"
+              placeholder="Enter description"
             />
-            <br />
-          </label>
-          <p>Drag and Drop or browse to choose a file</p>
-          <div>
-  {selectimage && `${selectimage.name} - ${selectimage.type}`}
+          </div>
+          <div className="uploadFile">
+            <h4>Upload Icon</h4>
+          </div>
+          <div className="uploadIcon">
+            <label>
+              <input
+                type="file"
+                onChange={handleChangeImage}
+                name="image"
+                className="file"
+                autoComplete="off"
+                onBlur={handleblurImage}
+              />
+
+              <img
+                src={upload}
+                alt=""
+                placeholder="Drag and Drop or browse to choose file"
+              />
+              <br />
+            </label>
+            <p>Drag and Drop or browse to choose a file</p>
+            <div>
+              {selectimage && `${selectimage.name} - ${selectimage.type}`}
+            </div>
           </div>
         </div>
         <div className="form-actions">
@@ -165,8 +169,10 @@ const CreatCampaigns = ({ setOpenModal }: CreateCampaignsProps) => {
             <div>
               <button type="reset">Cancel</button>
             </div>
-            <div>
-              <button type="submit" disabled={!isFormValid ? true : false}> Create</button>
+            <div className="btn-Create">
+              <button type="submit" disabled={!isFormValid ? true : false}>
+                Create
+              </button>
             </div>
           </div>
         </div>
