@@ -2,14 +2,13 @@ import "./login.css";
 import Imlogo from "../../images/Imlogo.svg";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-// import {signIn} from "../../utilites/user"
+
 interface LoginData {
   username: string;
   password: string;
 }
 
 const Login = () => {;
-
   const [loginData, setLoginData] = useState({
     username: "",
     password: "",
@@ -32,13 +31,8 @@ const Login = () => {;
       return;
     }
     setForError(undefined);
-    /**
-     * replace <login url> with login end point
-     */
-    //  signIn(loginData).then(user=>{
-    //   // setUser(user);
-    //  })
   }
+
   // Navigation to Campaigns
   const navigate = useNavigate();
   const navigateToCampaign = () => {
