@@ -49,7 +49,7 @@ test("handle Click", () =>{
   const onClick = jest.fn()
   render(
     <Router>
-      <Login  onClick={onClick} title="Login"/>
+      <Login  />
     </Router>
   );
   const buttonElement = screen.getByText("Login")
