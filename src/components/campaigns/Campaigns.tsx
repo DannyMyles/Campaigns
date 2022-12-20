@@ -25,16 +25,16 @@ const Campaigns = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [campaingPerPage] = useState(5);
   
-  const fetchPosts = async () => {
-    setLoading(true);
-    const res = await api.get("/posts");
-    setCampaings(res.data);
-    setLoading(false);
-  };
+  // const fetchPosts = async () => {
+  //   setLoading(true);
+  //   const res = await api.get("/posts");
+  //   setCampaings(res.data);
+  //   setLoading(false);
+  // };
 
-  useEffect(() => {
-    fetchPosts();
-  }, []);
+  // useEffect(() => {
+  //   fetchPosts();
+  // }, []);
 
   //Get current post
   const indexOfLastCampaing = currentPage * campaingPerPage;
