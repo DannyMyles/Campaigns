@@ -94,10 +94,14 @@
   padding: 0 0.5rem;
   gap: 0.1rem;
 }
-.click,
-.date {
+.click{
   color: #014ca7;
   font-size: 1rem;
+  
+}
+.date span{
+  color: #4a90e2;
+  font-family: Lato;
 }
 .campaign-recent .inner-container {
   height: 162px;
@@ -136,6 +140,7 @@
   color: #707070;
 }
 
+
 .release-hitory {
   /* padding-left: 30px; */
   width: 100%;
@@ -159,7 +164,7 @@
 
 .create-campaign {
   width: 100%;
-  height: 74%;
+  height: 85%;
   /* padding: 81px 79px 81px 79px; */
   border-radius: 16px;
   background-color: #fff;

@@ -1,54 +1,20 @@
 import "./campaigns.css";
 import Imlogo from "../../images/Imlogo.svg";
 import create_campaign from "../../images/campaing/create_campaign.svg";
-import deposit_creation from "../../images/campaing/deposit_creation.svg";
-// import mpesa_xpress from "../../images/campaing/mpesa_xpress.svg";
 import location from "../../images/campaing/location.svg";
-// import user_configuration from "../../images/campaing/user-configurations.svg";
 import arrow_drop from "../../images/campaing/arrow_drop.svg";
-import { useEffect, useState } from "react";
+import {useState } from "react";
 import CreatCampaigns from "../createCampaigns/CreatCampaigns";
-import Modal from "../modal/Modal";
-import Pagination from "../pagination/Pagination";
-import { api } from "../data/api";
-import Recent from "../RecentCampaigns/Recent";
-
+import Modal from "../../pages/modal/Modal";
+import { Search } from "../../pages/search/Search";
 export interface Campaign {
   title: string;
   image?: URL;
 }
 
 const Campaigns = () => {
-  const [openModal, setOpenModal] = useState<any| null>(false);
-  const [loading, setLoading] = useState(false);
-  const [campaings, setCampaings] = useState<any>([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const [campaingPerPage] = useState(5);
-  
-  // const fetchPosts = async () => {
-  //   setLoading(true);
-  //   const res = await api.get("/posts");
-  //   setCampaings(res.data);
-  //   setLoading(false);
-  // };
-
-  // useEffect(() => {
-  //   fetchPosts();
-  // }, []);
-
-  //Get current post
-  const indexOfLastCampaing = currentPage * campaingPerPage;
-  const indexOfFirstCampaing = indexOfLastCampaing - campaingPerPage;
-  const currentCampaing = campaings.slice(
-    indexOfFirstCampaing,
-    indexOfLastCampaing
-  );
-
-  // Change page
-  const paginate = (pageNumber: any) => setCurrentPage(pageNumber);
-
-  //Redirect
-
+  const [openModal, setOpenModal] = useState<any | null>(false);
+  const date = new Date()
   return (
     <div className="top-header">
       <div className="profile">
@@ -76,10 +42,10 @@ const Campaigns = () => {
             <h4>Hello John! Here's your recent feature release activity.</h4>
           </div>
           <div className="campaign-address">
-            <div className="lineup"></div><div className="line"></div>
+            <div className="lineup"></div>
+            <div className="line"></div>
             <div className="location">
               <div>
-                {" "}
                 <img src={location} alt="" />
               </div>
               <div>
@@ -87,15 +53,16 @@ const Campaigns = () => {
               </div>
 
               <div className="date">
-                <span>
-                 Saturday 06, June | 2210Hrs
-                </span>
+                <span>{date.toDateString()}</span>
               </div>
             </div>
           </div>
         </div>
       </div>
 
+      <div className="searchC">
+        <Search />
+      </div>
       {/* RELEASES */}
       <div className="release-container inner-container">
         <div className="new-release">
@@ -135,14 +102,6 @@ const Campaigns = () => {
           </div>
 
           <div>
-            <Recent campaings={currentCampaing} loading={loading} />
-          </div>
-          <div>
-            <Pagination
-              CampaingPerPage={campaingPerPage}
-              totalCampaings={campaings.length}
-              paginate={paginate}
-            />
           </div>
         </div>
       </div>

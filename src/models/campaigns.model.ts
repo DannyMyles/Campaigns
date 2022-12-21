@@ -4,10 +4,10 @@ export interface Campaign {
     "description": string;
   }
 
-  export interface CampaignResponse<T> {
-    page: number
+  export interface CampaignResponse{
+    pageNo: number
     per_page: number
     total: number
-    total_pages: number
-    data: T[]
+    pageSize: number
+    campaigns: Campaign[]
   }
